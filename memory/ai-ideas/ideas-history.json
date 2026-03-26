@@ -568,10 +568,75 @@
       "issue_id": 149,
       "tags": ["creative", "entertainment", "personalization", "voice", "multimodal", "gamification"],
       "created_at": "2026-03-25T17:03:00+08:00"
+    },
+    {
+      "id": 76,
+      "title": "AI 拿手菜养成教练",
+      "status": "open",
+      "issue_id": 151,
+      "tags": ["daily-life", "multimodal", "voice", "gamification", "cooking", "beginner-friendly"],
+      "created_at": "2026-03-25T18:01:00+08:00"
+    },
+    {
+      "id": 77,
+      "title": "AI 夜归守护者",
+      "status": "open",
+      "issue_id": 154,
+      "tags": ["daily-life", "safety", "voice", "real-time", "personalization", "women-safety", "health"],
+      "created_at": "2026-03-25T21:01:00+08:00"
+    },
+    {
+      "id": 78,
+      "title": "AI 演讲自信教练",
+      "status": "open",
+      "issue_id": 157,
+      "tags": ["career", "soft-skills", "voice", "personalization", "mental-wellness", "public-speaking"],
+      "created_at": "2026-03-25T23:01:00+08:00"
+    },
+    {
+      "id": 79,
+      "title": "AI 二手物品定价师",
+      "status": "open",
+      "issue_id": 162,
+      "tags": ["daily-life", "multimodal", "e-commerce", "personalization", "cost-saving"],
+      "created_at": "2026-03-26T02:01:00+08:00"
+    },
+    {
+      "id": 80,
+      "title": "AI 城市微探险向导",
+      "status": "open",
+      "issue_id": 164,
+      "tags": ["daily-life", "gamification", "personalization", "multimodal", "community", "lifestyle"],
+      "created_at": "2026-03-26T03:01:00+08:00"
+    },
+    {
+      "id": 81,
+      "title": "AI 搬家打包指挥官",
+      "status": "open",
+      "issue_id": 165,
+      "tags": ["daily-life", "multimodal", "efficiency", "moving", "organization"],
+      "created_at": "2026-03-26T04:01:00+08:00"
+    },
+    {
+      "id": 82,
+      "title": "AI 邻里沟通破冰官",
+      "status": "open",
+      "issue_id": 169,
+      "tags": ["daily-life", "social-skills", "personalization", "multimodal", "mental-wellness", "communication"],
+      "created_at": "2026-03-26T07:01:00+08:00"
+    },
+    {
+      "id": 83,
+      "title": "AI 跑步陪练",
+      "status": "open",
+      "issue_id": 174,
+      "tags": ["health", "fitness", "voice", "gamification", "beginner-friendly", "real-time", "running"],
+      "created_at": "2026-03-26T10:01:00+08:00"
     }
   ],
   "themes_used": [
-    "family", "memory", "personalization", "daily-life", "e-commerce", "sustainability",
+    "family", "memory", "personalization", "daily-life", "e-commerce", "sustainability", "fashion",
+    "finance", "education", "beginner-friendly",
     "focus", "sleep", "creativity", "meetings", "lifestyle", "relationships",
     "language-learning", "data-analysis", "music", "developer-tools", "planning",
     "team-collaboration", "b2b", "learning", "personal-growth", "tool", "job-search",
@@ -583,6 +648,50 @@
     "education", "visualization", "productivity", "social", "diagnosis", "cost-saving",
     "safety", "children", "midlife-transition", "seniors", "offline", "privacy-first",
     "gamification", "plants", "cultural-preservation", "behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies", "decision-support", "women-safety", "wedding", "public-speaking"
+  ],
+  "last_updated": "2026-03-26T05:01:00+08:00"
+}
+n", "plants", "cultural-preservation", "behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+00+08:00"
+}
+n", "plants", "cultural-preservation", "behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+ltural-preservation", "behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+ewbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+ltural-preservation", "behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+behavior-science", "iot",
+    "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
+    "social-skills", "soft-skills", "newbies"
+  ],
+  "last_updated": "2026-03-25T07:01:00+08:00"
+}
+: "2026-03-25T07:01:00+08:00"
+}
+behavior-science", "iot",
     "consumer-rights", "culture", "driving", "beginner-friendly", "cross-cultural",
     "social-skills", "soft-skills", "newbies"
   ],

@@ -1,0 +1,32 @@
+{
+  "name": "openclaw-github-skill",
+  "version": "2.0.0",
+  "description": "GitHub integration skill for OpenClaw — query repos, check CI status, create issues",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "github",
+    "git",
+    "automation"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conorkennedy/openclaw-github-skill"
+  },
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "openclaw",
+    "skill",
+    "github",
+    "git",
+    "automation"
+  ],
+  "author": "Conor Kennedy",
+  "license": "MIT"
+}

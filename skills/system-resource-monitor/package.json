@@ -1,0 +1,7 @@
+{
+  "name": "system-resource-monitor",
+  "version": "1.0.0",
+  "description": "A clean, reliable system resource monitor for CPU load, RAM, Swap, and Disk usage.",
+  "main": "SKILL.md",
+  "author": "Yennefer & Geralt"
+}

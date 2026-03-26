@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>男生发型指南 - 找到适合你的发型</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">✂️ 发型指南</a>
+            <ul class="nav-links">
+                <li><a href="#face-test">脸型测试</a></li>
+                <li><a href="#hairstyles">发型推荐</a></li>
+                <li><a href="#styling">造型教程</a></li>
+                <li><a href="#products">产品推荐</a></li>
+            </ul>
+            <button class="mobile-menu-btn">☰</button>
+        </div>
+    </nav>
+
+    <!-- 英雄区域 -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>找到最适合你的发型</h1>
+            <p>根据你的脸型、发质和风格，获取专业发型推荐</p>
+            <a href="#face-test" class="cta-btn">开始测试 →</a>
+        </div>
+    </header>
+
+    <!-- 脸型测试 -->
+    <section id="face-test" class="section face-test">
+        <div class="container">
+            <h2 class="section-title">🎯 测测你的脸型</h2>
+            <p class="section-desc">回答几个简单问题，找出你的脸型</p>
+            
+            <div class="quiz-container">
+                <div class="quiz-step active" data-step="1">
+                    <h3>你的额头和下巴哪个更宽？</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="forehead">额头更宽</button>
+                        <button class="quiz-option" data-value="equal">差不多宽</button>
+                        <button class="quiz-option" data-value="jaw">下巴更宽</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-step" data-step="2">
+                    <h3>你的脸型整体是什么形状？</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="long">偏长</button>
+                        <button class="quiz-option" data-value="round">偏圆</button>
+                        <button class="quiz-option" data-value="square">方正</button>
+                        <button class="quiz-option" data-value="oval">椭圆形</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-step" data-step="3">
+                    <h3>你的下颌线是什么形状？</h3>
+                    <div class="quiz-options">
+                        <button class="quiz-option" data-value="sharp">棱角分明</button>
+                        <button class="quiz-option" data-value="soft">圆润柔和</button>
+                        <button class="quiz-option" data-value="pointed">尖下巴</button>
+                    </div>
+                </div>
+                
+                <div class="quiz-result" id="quiz-result">
+                    <h3>你的脸型是：<span id="face-type"></span></h3>
+                    <p id="face-desc"></p>
+                    <a href="#hairstyles" class="cta-btn">查看推荐发型 →</a>
+                </div>
+            </div>
+            
+            <!-- 脸型参考图 -->
+            <div class="face-shapes-grid">
+                <div class="face-shape-card" data-type="oval">
+                    <div class="face-icon">🥚</div>
+                    <h4>鹅蛋脸</h4>
+                    <p>理想脸型，几乎适合所有发型</p>
+                </div>
+                <div class="face-shape-card" data-type="round">
+                    <div class="face-icon">⚪</div>
+                    <h4>圆脸</h4>
+                    <p>适合增加高度、收紧两侧的发型</p>
+                </div>
+                <div class="face-shape-card" data-type="square">
+                    <div class="face-icon">⬜</div>
+                    <h4>方脸</h4>
+                    <p>适合柔和线条、增加顶部高度</p>
+                </div>
+                <div class="face-shape-card" data-type="long">
+                    <div class="face-icon">📏</div>
+                    <h4>长脸</h4>
+                    <p>适合增加两侧宽度、留刘海</p>
+                </div>
+                <div class="face-shape-card" data-type="diamond">
+                    <div class="face-icon">💎</div>
+                    <h4>菱形脸</h4>
+                    <p>适合增加上额宽度、柔和下巴</p>
+                </div>
+                <div class="face-shape-card" data-type="heart">
+                    <div class="face-icon">💜</div>
+                    <h4>心形脸</h4>
+                    <p>适合增加下颌宽度、侧分发型</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 发型推荐 -->
+    <section id="hairstyles" class="section hairstyles">
+        <div class="container">
+            <h2 class="section-title">💇 经典发型推荐</h2>
+            <p class="section-desc">精选适合亚洲男生的热门发型</p>
+            
+            <!-- 发型分类标签 -->
+            <div class="hairstyle-tabs">
+                <button class="tab-btn active" data-category="all">全部</button>
+                <button class="tab-btn" data-category="short">短发</button>
+                <button class="tab-btn" data-category="medium">中发</button>
+                <button class="tab-btn" data-category="long">长发</button>
+            </div>
+            
+            <!-- 发型卡片 -->
+            <div class="hairstyles-grid">
+                <!-- 侧分油头 -->
+                <div class="hairstyle-card" data-category="short" data-faces="oval,round,square,long">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">💇‍♂️</div>
+                        <span class="hairstyle-tag">经典</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>侧分油头</h3>
+                        <p class="hairstyle-desc">永不过时的经典发型，适合商务和正式场合</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：5-10分钟</span>
+                            <span>🎯 难度：中等</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">圆脸</span>
+                            <span class="face-tag">方脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>两侧渐变铲青，顶部留5-8cm，用发蜡向后向上梳理，最后用定型喷雾固定</p>
+                    </div>
+                </div>
+                
+                <!-- 寸头 -->
+                <div class="hairstyle-card" data-category="short" data-faces="oval,square,diamond">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">✂️</div>
+                        <span class="hairstyle-tag">清爽</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>寸头</h3>
+                        <p class="hairstyle-desc">极致简约，彰显硬朗气质，几乎零打理</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：0分钟</span>
+                            <span>🎯 难度：简单</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">方脸</span>
+                            <span class="face-tag">菱形脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>全头统一3-6mm长度，注意耳朵周围和后颈的清洁线条。夏天首选！</p>
+                    </div>
+                </div>
+                
+                <!-- 飞机头 -->
+                <div class="hairstyle-card" data-category="short" data-faces="oval,round,square">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">✈️</div>
+                        <span class="hairstyle-tag">潮流</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>飞机头</h3>
+                        <p class="hairstyle-desc">青春活力，街头潮流必备，增高显脸小</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：5-8分钟</span>
+                            <span>🎯 难度：中等</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">圆脸</span>
+                            <span class="face-tag">方脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>刘海向上吹起，用定型力强的发蜡支撑，打造前翘效果。两侧铲短形成对比。</p>
+                    </div>
+                </div>
+                
+                <!-- 纹理短发 -->
+                <div class="hairstyle-card" data-category="short" data-faces="oval,round,long,diamond">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">🌀</div>
+                        <span class="hairstyle-tag">自然</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>纹理短发</h3>
+                        <p class="hairstyle-desc">轻松随意，适合日常，显得年轻有活力</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：2-3分钟</span>
+                            <span>🎯 难度：简单</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">圆脸</span>
+                            <span class="face-tag">长脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>用纹理剪裁打造层次感，搭配海盐水或发泥抓出自然的凌乱感。</p>
+                    </div>
+                </div>
+                
+                <!-- 中分/八字刘海 -->
+                <div class="hairstyle-card" data-category="medium" data-faces="oval,long,diamond,heart">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">🍃</div>
+                        <span class="hairstyle-tag">韩系</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>中分/八字刘海</h3>
+                        <p class="hairstyle-desc">韩系暖男必备，温柔气质，修饰额头</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：5-10分钟</span>
+                            <span>🎯 难度：中等</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">长脸</span>
+                            <span class="face-tag">菱形脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>刘海长度到眉毛或以下，向两侧自然分开。发尾微卷更有韩系感。</p>
+                    </div>
+                </div>
+                
+                <!-- 背头 -->
+                <div class="hairstyle-card" data-category="medium" data-faces="oval,square,diamond">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">👔</div>
+                        <span class="hairstyle-tag">成熟</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>背头</h3>
+                        <p class="hairstyle-desc">成熟稳重，气场十足，适合职场精英</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：5-8分钟</span>
+                            <span>🎯 难度：中等</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">方脸</span>
+                            <span class="face-tag">菱形脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>前额头发全部向后梳，用发油打造光泽感。两侧渐变铲青更显精致。</p>
+                    </div>
+                </div>
+                
+                <!-- 狼尾 -->
+                <div class="hairstyle-card" data-category="medium" data-faces="oval,round,square">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">🐺</div>
+                        <span class="hairstyle-tag">个性</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>狼尾</h3>
+                        <p class="hairstyle-desc">个性十足，近期大热，兼具复古与现代</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：3-5分钟</span>
+                            <span>🎯 难度：简单</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">圆脸</span>
+                            <span class="face-tag">方脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>后脑勺头发留长形成"尾巴"，两侧铲短。顶部可以有纹理或向后梳。</p>
+                    </div>
+                </div>
+                
+                <!-- 扎发/丸子头 -->
+                <div class="hairstyle-card" data-category="long" data-faces="oval,square,diamond">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">🎗️</div>
+                        <span class="hairstyle-tag">艺术</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>扎发/丸子头</h3>
+                        <p class="hairstyle-desc">艺术家气质，独特个性，需要耐心留长</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：1-3分钟</span>
+                            <span>🎯 难度：简单</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">方脸</span>
+                            <span class="face-tag">菱形脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>头发长度需15cm以上。可以扎半丸子或全扎，碎发自然垂落更有味道。</p>
+                    </div>
+                </div>
+                
+                <!-- 狼尾鲻鱼头 -->
+                <div class="hairstyle-card" data-category="medium" data-faces="oval,heart,diamond">
+                    <div class="hairstyle-image">
+                        <div class="hairstyle-placeholder">🐟</div>
+                        <span class="hairstyle-tag">复古</span>
+                    </div>
+                    <div class="hairstyle-info">
+                        <h3>鲻鱼头 Mullet</h3>
+                        <p class="hairstyle-desc">复古回潮，前短后长，摇滚态度</p>
+                        <div class="hairstyle-meta">
+                            <span>⏱️ 造型时间：5-10分钟</span>
+                            <span>🎯 难度：中等</span>
+                        </div>
+                        <div class="suitable-faces">
+                            <strong>适合脸型：</strong>
+                            <span class="face-tag">鹅蛋脸</span>
+                            <span class="face-tag">心形脸</span>
+                            <span class="face-tag">菱形脸</span>
+                        </div>
+                        <p class="styling-tip"><strong>造型要点：</strong>前面和两侧短，后面长。可以用卷发棒打造波浪纹理，更有复古感。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 造型教程 -->
+    <section id="styling" class="section styling">
+        <div class="container">
+            <h2 class="section-title">🎨 造型教程</h2>
+            <p class="section-desc">从入门到精通，掌握发型造型技巧</p>
+            
+            <div class="tutorials-grid">
+                <div class="tutorial-card">
+                    <div class="tutorial-number">01</div>
+                    <h3>基础工具准备</h3>
+                    <ul class="tutorial-list">
+                        <li>✅ 吹风机（带集风嘴）</li>
+                        <li>✅ 圆筒梳 / 九排梳</li>
+                        <li>✅ 发蜡 / 发泥 / 发油</li>
+                        <li>✅ 定型喷雾</li>
+                        <li>✅ 海盐水（可选）</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-number">02</div>
+                    <h3>吹发技巧</h3>
+                    <ul class="tutorial-list">
+                        <li>🌀 顺着发流方向吹干</li>
+                        <li>🌀 用手指拨弄发根增加蓬松</li>
+                        <li>🌀 冷热风交替定型</li>
+                        <li>🌀 最后用冷风吹固定造型</li>
+                        <li>🌀 头顶向上吹，两侧向后吹</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-number">03</div>
+                    <h3>造型产品使用</h3>
+                    <ul class="tutorial-list">
+                        <li>💎 取豆子大小于掌心搓热</li>
+                        <li>💎 均匀涂抹在手指上</li>
+                        <li>💎 从发根开始抓涂</li>
+                        <li>💎 最后整理发丝走向</li>
+                        <li>💎 定型喷雾距离20cm喷洒</li>
+                    </ul>
+                </div>
+                
+                <div class="tutorial-card">
+                    <div class="tutorial-number">04</div>
+                    <h3>常见问题解决</h3>
+                    <ul class="tutorial-list">
+                        <li>❓ 塌发：逆向吹发根+发泥支撑</li>
+                        <li>❓ 毛躁：用发油抚平毛鳞片</li>
+                        <li>❓ 没型：找专业理发师剪出层次</li>
+                        <li>❓ 易散：定型喷雾+多点少量</li>
+                        <li>❓ 太油：减少产品用量或换哑光款</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- 快速造型视频指南 -->
+            <div class="quick-guide">
+                <h3>⚡ 5分钟快速出门造型</h3>
+                <div class="steps-timeline">
+                    <div class="step">
+                        <span class="step-time">0:00</span>
+                        <p>洗头或打湿头发</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-time">0:30</span>
+                        <p>用毛巾擦到半干</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-time">1:00</span>
+                        <p>吹风机吹至80%干</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-time">2:30</span>
+                        <p>涂抹发蜡抓出造型</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-time">4:00</span>
+                        <p>定型喷雾固定</p>
+                    </div>
+                    <div class="step">
+                        <span class="step-time">5:00</span>
+                        <p>✨ 完成！出门！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 产品推荐 -->
+    <section id="products" class="section products">
+        <div class="container">
+            <h2 class="section-title">🛍️ 造型产品推荐</h2>
+            <p class="section-desc">不同发质和造型需求，选择合适的产品</p>
+            
+            <div class="products-comparison">
+                <table class="product-table">
+                    <thead>
+                        <tr>
+                            <th>产品类型</th>
+                            <th>定型力</th>
+                            <th>光泽度</th>
+                            <th>适合发型</th>
+                            <th>推荐人群</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>发蜡 Wax</strong></td>
+                            <td>⭐⭐⭐⭐</td>
+                            <td>⭐⭐</td>
+                            <td>油头、侧分、背头</td>
+                            <td>追求整齐造型</td>
+                        </tr>
+                        <tr>
+                            <td><strong>发泥 Clay</strong></td>
+                            <td>⭐⭐⭐</td>
+                            <td>⭐</td>
+                            <td>纹理短发、凌乱风</td>
+                            <td>追求自然哑光</td>
+                        </tr>
+                        <tr>
+                            <td><strong>发油 Pomade</strong></td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>复古油头、大背头</td>
+                            <td>追求光泽感</td>
+                        </tr>
+                        <tr>
+                            <td><strong>发胶 Gel</strong></td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>⭐⭐⭐</td>
+                            <td>需要强力定型</td>
+                            <td>硬发质、潮湿天气</td>
+                        </tr>
+                        <tr>
+                            <td><strong>海盐水</strong></td>
+                            <td>⭐⭐</td>
+                            <td>⭐</td>
+                            <td>沙滩卷、自然纹理</td>
+                            <td>追求蓬松感</td>
+                        </tr>
+                        <tr>
+                            <td><strong>定型喷雾</strong></td>
+                            <td>⭐⭐⭐⭐⭐</td>
+                            <td>无</td>
+                            <td>所有发型（最后步骤）</td>
+                            <td>所有人必备</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="product-tips">
+                <h3>💡 选品小贴士</h3>
+                <div class="tips-grid">
+                    <div class="tip">
+                        <h4>细软发质</h4>
+                        <p>选择轻盈型发泥或海盐水，避免太厚重的产品压塌头发</p>
+                    </div>
+                    <div class="tip">
+                        <h4>粗硬发质</h4>
+                        <p>选择定型力强的发蜡或发胶，需要更强的控制力</p>
+                    </div>
+                    <div class="tip">
+                        <h4>油性头皮</h4>
+                        <p>选择哑光产品，避免高光泽发油加重油腻感</p>
+                    </div>
+                    <div class="tip">
+                        <h4>干燥发质</h4>
+                        <p>可以用含滋润成分的发油，同时保湿和定型</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 理发店沟通指南 -->
+    <section class="section barber-guide">
+        <div class="container">
+            <h2 class="section-title">💈 如何跟理发师沟通</h2>
+            <p class="section-desc">说清楚你的需求，避免翻车</p>
+            
+            <div class="communication-tips">
+                <div class="comm-card">
+                    <h3>📸 带图片！</h3>
+                    <p>这是最有效的方式。找2-3张你想要的发型照片，正面+侧面视角更好。</p>
+                    <div class="warning">⚠️ 注意选择发质和你相似的参考图</div>
+                </div>
+                
+                <div class="comm-card">
+                    <h3>📏 说数字</h3>
+                    <p>理发器卡尺的数字代表长度（1号=3mm，2号=6mm...）</p>
+                    <ul>
+                        <li>"两侧3号或4号渐变"</li>
+                        <li>"顶部留8-10厘米"</li>
+                        <li>"后颈自然过渡，不要铲太光"</li>
+                    </ul>
+                </div>
+                
+                <div class="comm-card">
+                    <h3>✂️ 说剪法</h3>
+                    <p>专业术语会让理发师更懂你</p>
+                    <ul>
+                        <li><strong>渐变 Fade</strong> - 从短到长的过渡</li>
+                        <li><strong>铲青 Undercut</strong> - 两侧完全推光</li>
+                        <li><strong>纹理 Texture</strong> - 剪出层次感</li>
+                        <li><strong>打薄 Thinning</strong> - 减少发量</li>
+                    </ul>
+                </div>
+                
+                <div class="comm-card">
+                    <h3>❓ 问清楚</h3>
+                    <p>剪之前确认这些：</p>
+                    <ul>
+                        <li>"这个发型我每天需要多久打理？"</li>
+                        <li>"需要什么造型产品？"</li>
+                        <li>"多久需要回来修剪？"</li>
+                        <li>"这个长度适合我的脸型吗？"</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h3>✂️ 男生发型指南</h3>
+                    <p>帮你找到最适合的发型</p>
+                </div>
+                <div class="footer-links">
+                    <a href="#face-test">脸型测试</a>
+                    <a href="#hairstyles">发型推荐</a>
+                    <a href="#styling">造型教程</a>
+                    <a href="#products">产品推荐</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>Made with ❤️ by 咕噜 | 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
