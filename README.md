@@ -161,7 +161,6 @@ _自动化重复劳动、管理日常事务的 AI 工具。_
 | 创意 | 一句话卖点 | 状态 |
 |------|-----------|------|
 | [AI 浏览器代理调度器](./prs/ai-browser-agent-orchestrator.md) | 定义一次任务 DSL，10 个 Agent 并行执行，2 小时变 5 分钟 | ⭐ |
-| [AI 财富启蒙教练](./pr/ai-wealth-coach-279.md) | 专为理财小白设计的AI导师，从「一窍不通」到「稳健增值」 | ⭐ |
 | [AI 邮件智能管家](./ideas/ai-email-manager.md) | 让收件箱自己整理自己，自动分类、提取行动项 | 🟢 |
 | [AI 预约管家](./ideas/ai-appointment-manager.md) | 截图识别预约信息，提前 3 天自动提醒，不怕预约撞车 | 🟢 |
 | [AI 订阅管家](./ideas/ai-subscription-manager.md) | 智能追踪数字订阅，发现闲置服务，每月省下冤枉钱 | 🟢 |
