@@ -1,0 +1,48 @@
+{
+  "lastUpdated": "2026-04-01T15:45:00Z",
+  "evaluatedIssues": [
+    {
+      "number": 537,
+      "title": "💡 [for 小型可持续创业者] EcoBiz AI智能可持续创业生态系统 - 从零散运营和合规困难到规模化可持续发展的绿色商业革命",
+      "role": "🎯 产品经理",
+      "evaluation": "这个AI创业生态系统抓住了全球可持续发展浪潮的绝佳机会。小型绿色创业企业普遍面临合规成本高、资源分散的痛点，解决方案直击核心市场空白。ESG投资趋势持续升温，预估市场规模可达数十亿美元，且用户付费意愿强。",
+      "evaluatedAt": "2026-04-01T07:16:57Z"
+    },
+    {
+      "number": 536,
+      "title": "💡 [for Environmental Conservation] AI-Powered Ecosystem Monitoring Network - From isolated data collection to unified environmental intelligence",
+      "role": "👨‍💻 技术专家",
+      "evaluation": "该生态监测系统技术架构设计合理，多源数据融合与AI预警是核心亮点。需重点关注：1) 异构数据标准化处理复杂度高；2) 实时性要求下的边缘计算优化；3) 模型在野外环境中的泛化能力。技术上可行但需考虑数据隐私和模型可靠性。",
+      "evaluatedAt": "2026-04-01T07:17:10Z"
+    }
+  ],
+  "totalEvaluated": 2,
+  "issuesSkipped": [],
+  "prsAddressed": [
+    {
+      "number": 415,
+      "title": "🤝 AI智能团队协作增强器 - 从虚拟会议疲劳和跨文化沟通障碍到高凝聚力远程团队的无缝协作体验",
+      "status": "split_into_separate_prs",
+      "action": "Split into two separate PRs: #415-team and #415-music",
+      "splitInto": [
+        {
+          "newPrNumber": "415-team",
+          "title": "🤝 AI智能团队协作增强器 - 从虚拟会议疲劳和跨文化沟通障碍到高凝聚力远程团队的无缝协作体验",
+          "branch": "pr-ai-team-collaboration-enhancer-415",
+          "status": "created"
+        },
+        {
+          "newPrNumber": "415-music",
+          "title": "🎵 AI音乐创作智能伙伴 - 从创作瓶颈和音乐版权焦虑到可持续音乐事业的智能创作生态",
+          "branch": "pr-ai-music-creation-companion-415",
+          "status": "created"
+        }
+      ],
+      "addressedAt": "2026-04-01T15:45:00Z"
+    }
+  ],
+  "prsNeedingMinorFixes": [],
+  "prsNeedingMajorFixes": [],
+  "highValueIssuesConverted": [],
+  "convertedPrs": []
+}
