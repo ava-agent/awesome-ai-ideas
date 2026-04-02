@@ -26,7 +26,7 @@
 <a href="https://github.com/ava-agent/awesome-ai-ideas/commits"><img src="https://img.shields.io/github/last-commit/ava-agent/awesome-ai-ideas?style=flat-square" alt="Last Commit"></a>&nbsp;
 <a href="https://github.com/ava-agent/awesome-ai-ideas/commits"><img src="https://img.shields.io/github/commit-activity/m/ava-agent/awesome-ai-ideas?style=flat-square" alt="Commit Activity"></a>&nbsp;
 <a href="https://github.com/ava-agent/awesome-ai-ideas/graphs/contributors"><img src="https://img.shields.io/github/contributors/ava-agent/awesome-ai-ideas?style=flat-square" alt="Contributors"></a>&nbsp;
-<img src="https://img.shields.io/badge/ideas-61+-blue?style=flat-square" alt="Ideas">
+<img src="https://img.shields.io/badge/ideas-62+-blue?style=flat-square" alt="Ideas">
 
 <br>
 
@@ -49,7 +49,7 @@
 - [不只是灵感列表](#-不只是灵感列表)
 - [精选推荐](#-精选推荐)
 - **创意目录**
-  - [效率工具 (13)](#-效率工具) · [知识学习 (6)](#-知识学习) · [职业成长 (10)](#-职业成长) · [创意娱乐 (5)](#-创意娱乐) · [消费决策 (5)](#-消费决策) · [生活服务 (18)](#-生活服务) · [社交沟通 (6)](#-社交沟通)
+  - [效率工具 (14)](#-效率工具) · [知识学习 (6)](#-知识学习) · [职业成长 (10)](#-职业成长) · [创意娱乐 (5)](#-创意娱乐) · [消费决策 (5)](#-消费决策) · [生活服务 (18)](#-生活服务) · [社交沟通 (6)](#-社交沟通)
 - [创意统计](#-创意统计)
 - [如何参与](#-如何参与)
 - [Star History](#star-history)
@@ -173,6 +173,7 @@ _自动化重复劳动、管理日常事务的 AI 工具。_
 | [AI 会议健康守护者](./ideas/ai-meeting-health-guardian.md) | 智能守护会议健康，自动提醒休息、会后恢复建议 | 🟢 |
 | [AI 数字断舍离助手](./ideas/ai-digital-declutter-assistant.md) | 智能分析数字生活，一键清理数字囤积 | 🟢 |
 | [AI 任务拆解启动器](./proposals/task-decomposer.md) | 3 秒拆成 5 分钟微步骤，专治拖延症 | 💡 |
+| [Dynamic GPU Memory Manager](./docs/gpu-memory-manager/README.md) | 智能 GPU 内存管理，动态分配资源，防止内存溢出，最大化 GPU 利用率 | 🟢 |
 
 **[⬆ 返回顶部](#awesome-ai-ideas)**
 
