@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-01T15:45:00Z",
+  "lastUpdated": "2026-04-02T19:30:00Z",
   "evaluatedIssues": [
     {
       "number": 537,
@@ -39,6 +39,20 @@
         }
       ],
       "addressedAt": "2026-04-01T15:45:00Z"
+    },
+    {
+      "number": 612,
+      "title": "feat: [for 慢性病患者] AI智能健康生活伙伴 - 从疾病管理负担和心理压力到自主健康掌控的慢性病生活革命",
+      "status": "structural_issues_fixed",
+      "action": "Fixed structural issues by removing template files, restoring README.md structure, and adding AI health companion to docs/",
+      "issuesFixed": [
+        "Removed OpenClaw template files (AGENTS.md, SOUL.md, etc.)",
+        "Restored original README.md structure", 
+        "Added AI health companion documentation to docs/ directory",
+        "Resolved merge conflicts with PR #613",
+        "Added GPU memory manager as separate document in efficiency tools section"
+      ],
+      "addressedAt": "2026-04-02T19:30:00Z"
     }
   ],
   "prsNeedingMinorFixes": [],
