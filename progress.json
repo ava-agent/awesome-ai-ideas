@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-03T11:45:00Z",
+  "lastUpdated": "2026-04-03T13:33:00Z",
   "evaluatedIssues": [
     {
       "number": 537,
@@ -104,6 +104,36 @@
       "prBranch": "feat/high-value-ideas-prs-629-630",
       "prStatus": "created",
       "convertedAt": "2026-04-03T11:43:00Z"
+    },
+    {
+      "number": 644,
+      "title": "💡 [for 普通家庭] AI智能家庭财务管家 - 从分散消费和预算失控到智能化全家财务健康生态系统的个人理财革命",
+      "evaluations": 0,
+      "evaluationsDetails": [],
+      "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/647",
+      "prBranch": "feat/high-value-ideas-batch-2",
+      "prStatus": "created",
+      "convertedAt": "2026-04-03T13:33:00Z"
+    },
+    {
+      "number": 646,
+      "title": "💡 [for 职场新人] AI智能职场导航官 - 从社交焦虑和人脉迷茫到自信职业发展的社交能力革命",
+      "evaluations": 0,
+      "evaluationsDetails": [],
+      "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/647",
+      "prBranch": "feat/high-value-ideas-batch-2",
+      "prStatus": "created",
+      "convertedAt": "2026-04-03T13:33:00Z"
+    },
+    {
+      "number": 642,
+      "title": "💡 [for 业余艺术爱好者] AI智能艺术成长伙伴 - 从自学无门和创作瓶颈到个性化艺术技能发展的终身学习革命",
+      "evaluations": 0,
+      "evaluationsDetails": [],
+      "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/647",
+      "prBranch": "feat/high-value-ideas-batch-2",
+      "prStatus": "created",
+      "convertedAt": "2026-04-03T13:33:00Z"
     }
   ],
   "convertedPrs": [
@@ -114,6 +144,15 @@
       "branch": "feat/high-value-ideas-prs-629-630",
       "includedIssues": [629, 630],
       "createdAt": "2026-04-03T11:43:00Z",
+      "status": "created"
+    },
+    {
+      "prNumber": 647,
+      "prTitle": "feat: 创建3个高价值AI创意PR文档 (#644, #646, #642)",
+      "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/647",
+      "branch": "feat/high-value-ideas-batch-2",
+      "includedIssues": [644, 646, 642],
+      "createdAt": "2026-04-03T13:33:00Z",
       "status": "created"
     }
   ],
@@ -126,10 +165,13 @@
     "priority2": {
       "description": "将高价值想法（2+正面评价，无重大风险）转换为详细PR文档",
       "status": "completed",
-      "convertedCount": 2,
+      "convertedCount": 5,
       "details": [
         "Issue #629: AI智能健身游戏化教练 (3个正面评价) - 已转换为PR #644",
-        "Issue #630: AI智能艺术创作流程优化师 (2个正面评价) - 已转换为PR #644"
+        "Issue #630: AI智能艺术创作流程优化师 (2个正面评价) - 已转换为PR #644",
+        "Issue #644: AI智能家庭财务管家 - 已转换为PR #647",
+        "Issue #646: AI智能职场导航官 - 已转换为PR #647",
+        "Issue #642: AI智能艺术成长伙伴 - 已转换为PR #647"
       ]
     },
     "retryAttempts": 0,
