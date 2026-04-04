@@ -1,0 +1,88 @@
+{
+  "issues": [
+    {
+      "id": 468,
+      "title": "💡 [for 宠物主人] AI宠物生活智慧管家 - 从焦虑养宠到科学养宠的全面宠物健康管理革命",
+      "created_at": "2026-03-30T17:01:00Z",
+      "status": "created",
+      "evaluated_at": "2026-03-30T17:15:35Z",
+      "role": "🎯 产品经理",
+      "comment_id": "4156722146",
+      "pr_created": true,
+      "pr_number": 469,
+      "pr_branch": "pr-ai-pet-life-wisdom-steward-468",
+      "created_at": "2026-03-31T01:30:00Z"
+    },
+    {
+      "id": 461,
+      "title": "💡 [for 创意设计师] AI创意工作台 - 从灵感枯竭和碎片化协作到跨媒体创作一体化革命",
+      "created_at": "2026-03-30T14:03:24Z",
+      "status": "created",
+      "evaluated_at": "2026-03-30T17:15:41Z",
+      "role": "👨‍💻 技术专家",
+      "comment_id": "4156722767",
+      "pr_created": true,
+      "pr_number": 470,
+      "pr_branch": "pr-ai-creative-workbench-461",
+      "created_at": "2026-03-31T01:30:00Z"
+    },
+    {
+      "id": 97,
+      "title": "💡 [for 中国家庭] AI代际沟通翻译官 - 从沟通隔阂到深度理解的桥梁",
+      "status": "evaluated",
+      "evaluated_at": "2026-03-31T09:30:00Z",
+      "role": "👨‍💻 技术专家",
+      "pr_created": true,
+      "pr_number": 471,
+      "pr_branch": "pr-ai-intergenerational-translator-97",
+      "created_at": "2026-03-31T09:30:00Z",
+      "evaluation_score": 9.5
+    },
+    {
+      "id": 125,
+      "title": "💡 [for 开发者] AI错误诊断师 - 从报错焦虑到精准修复的智能助手",
+      "status": "evaluated",
+      "evaluated_at": "2026-03-31T09:30:00Z",
+      "role": "🎯 产品经理",
+      "pr_created": true,
+      "pr_number": 472,
+      "pr_branch": "pr-ai-error-diagnostician-125",
+      "created_at": "2026-03-31T09:30:00Z",
+      "evaluation_score": 9.8
+    }
+  ],
+  "last_updated": "2026-03-31T09:30:00Z",
+  "total_created": 4,
+  "total_evaluated": 4,
+  "pr_created_today": 4,
+  "recent_prs": [
+    {
+      "number": 471,
+      "title": "AI代际沟通翻译官",
+      "branch": "pr-ai-intergenerational-translator-97",
+      "created_at": "2026-03-31T09:30:00Z",
+      "issue_id": 97,
+      "evaluation_score": 9.5
+    },
+    {
+      "number": 472,
+      "title": "AI错误诊断师",
+      "branch": "pr-ai-error-diagnostician-125",
+      "created_at": "2026-03-31T09:30:00Z",
+      "issue_id": 125,
+      "evaluation_score": 9.8
+    },
+    {
+      "number": 469,
+      "title": "AI宠物生活智慧管家",
+      "branch": "pr-ai-pet-life-wisdom-steward-468",
+      "created_at": "2026-03-31T01:30:00Z"
+    },
+    {
+      "number": 470,
+      "title": "AI创意工作台",
+      "branch": "pr-ai-creative-workbench-461",
+      "created_at": "2026-03-31T01:30:00Z"
+    }
+  ]
+}
