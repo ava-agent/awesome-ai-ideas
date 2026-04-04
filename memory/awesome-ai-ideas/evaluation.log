@@ -1,0 +1,49 @@
+[2026-04-04T12:17:04Z] Starting AI Ideas evaluation workflow
+[2026-04-04T12:17:04Z] WARNING: No GH_TOKEN set. Using public API (limited rate).
+[2026-04-04T12:17:04Z] To increase rate limits, set up GitHub token: export GH_TOKEN='your_token_here'
+[2026-04-04T12:17:04Z] Fetching issues from ava-agent/awesome-ai-ideas...
+[2026-04-04T12:17:04Z] API attempt 1/2: issues?state=open&per_page=50
+[2026-04-04T12:17:05Z] Rate limit hit, waiting 5 seconds...
+[2026-04-04T12:17:10Z] API attempt 2/2: issues?state=open&per_page=50
+[2026-04-04T12:17:10Z] Rate limit hit, waiting 5 seconds...
+[2026-04-04T12:17:15Z] API request failed after 2 attempts
+[2026-04-04T12:17:15Z] Progress updated: retry for #0
+[2026-04-04T12:17:15Z] No issues found
+[2026-04-04T12:18:10Z] Starting AI Ideas evaluation workflow
+[2026-04-04T12:18:10Z] WARNING: No GH_TOKEN set. Running in demo mode.
+[2026-04-04T12:18:10Z] To use with real GitHub API, set: export GH_TOKEN='your_token_here'
+[2026-04-04T12:18:10Z] === DEMO MODE (No GitHub Token) ===
+[2026-04-04T12:18:10Z] This demonstrates the evaluation workflow with sample issues.
+[2026-04-04T12:18:10Z] To use with real GitHub API, set: export GH_TOKEN='your_token_here'
+[2026-04-04T12:18:10Z] ---
+[2026-04-04T12:18:10Z] Evaluating demo issue #42 as product_manager
+[2026-04-04T12:18:10Z] Evaluating #42 as product_manager...
+[2026-04-04T12:18:10Z] Generated evaluation for #42
+[2026-04-04T12:18:10Z] Progress updated: evaluated for #42
+[2026-04-04T12:18:10Z] ✅ Successfully evaluated #42 as product_manager
+[2026-04-04T12:18:11Z] ---
+[2026-04-04T12:18:11Z] Evaluating demo issue #37 as technical_expert
+[2026-04-04T12:18:11Z] Evaluating #37 as technical_expert...
+[2026-04-04T12:18:11Z] Generated evaluation for #37
+[2026-04-04T12:18:11Z] Progress updated: evaluated for #37
+[2026-04-04T12:18:11Z] ✅ Successfully evaluated #37 as technical_expert
+[2026-04-04T12:18:11Z] Demo evaluation completed!
+[2026-04-04T14:31:21Z] Starting AI Ideas evaluation workflow
+[2026-04-04T14:31:21Z] WARNING: No GH_TOKEN set. Running in demo mode.
+[2026-04-04T14:31:21Z] To use with real GitHub API, set: export GH_TOKEN='your_token_here'
+[2026-04-04T14:31:21Z] === DEMO MODE (No GitHub Token) ===
+[2026-04-04T14:31:21Z] This demonstrates the evaluation workflow with sample issues.
+[2026-04-04T14:31:21Z] To use with real GitHub API, set: export GH_TOKEN='your_token_here'
+[2026-04-04T14:31:21Z] ---
+[2026-04-04T14:31:21Z] Evaluating demo issue #42 as product_manager
+[2026-04-04T14:31:21Z] Evaluating #42 as product_manager...
+[2026-04-04T14:31:22Z] Generated evaluation for #42
+[2026-04-04T14:31:22Z] Progress updated: evaluated for #42
+[2026-04-04T14:31:22Z] ✅ Successfully evaluated #42 as product_manager
+[2026-04-04T14:31:22Z] ---
+[2026-04-04T14:31:22Z] Evaluating demo issue #37 as technical_expert
+[2026-04-04T14:31:22Z] Evaluating #37 as technical_expert...
+[2026-04-04T14:31:22Z] Generated evaluation for #37
+[2026-04-04T14:31:22Z] Progress updated: evaluated for #37
+[2026-04-04T14:31:22Z] ✅ Successfully evaluated #37 as technical_expert
+[2026-04-04T14:31:22Z] Demo evaluation completed!

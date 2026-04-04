@@ -1,0 +1,13 @@
+{
+  "last_updated": "2026-04-04T12:15:00Z",
+  "total_issues_evaluated": 0,
+  "issues": [],
+  "evaluation_roles": {
+    "product_manager": "🎯 产品经理 - 关注用户价值、市场规模",
+    "technical_expert": "👨‍💻 技术专家 - 关注实现难度、技术风险", 
+    "business_analyst": "💰 商业分析 - 关注变现可能、竞品分析",
+    "growth_hacker": "🚀 增长黑客 - 关注推广策略、增长点"
+  },
+  "retry_count": 0,
+  "max_retries": 2
+}
