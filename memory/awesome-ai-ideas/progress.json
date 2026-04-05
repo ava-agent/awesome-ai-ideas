@@ -1,46 +1,148 @@
 {
-  "evaluated_issues": [
+  "lastReviewDate": "2026-04-06",
+  "reviewer": "AI Ideas PR Reviewer",
+  "repository": "ava-agent/awesome-ai-ideas",
+  "reviewSession": {
+    "startTime": "2026-04-06T00:00:00Z",
+    "endTime": "2026-04-06T00:30:00Z",
+    "totalPRs": 9,
+    "reviewedPRs": 9,
+    "status": "completed"
+  },
+  "reviews": [
     {
-      "issue_number": 697,
-      "title": "AI智能安全守护与紧急响应系统 - 从安全隐患和孤立无援到全天候守护与即时援助的居家安全保障革命",
-      "role": "🎯 产品经理",
-      "evaluation": "目标用户群体庞大且需求迫切，市场规模可观。解决真实痛点，社会价值显著，商业潜力巨大。建议优先推进。",
-      "comment_id": "4187685299",
-      "evaluated_at": "2026-04-04T20:16:21Z"
+      "prNumber": 766,
+      "title": "AI智能商务旅行与远程协作中枢",
+      "score": 8.5,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/766#issuecomment-4189567751",
+      "summary": "针对商务旅行者痛点的优秀提案，技术方案成熟，商业模式清晰"
     },
     {
-      "issue_number": 681,
-      "title": "AI智能孕产期职业可持续发展教练 - 从孕期工作压力和职业断层焦虑到科学职场规划与家庭和谐平衡的现代女性职业革命",
-      "role": "👨‍💻 技术专家",
-      "evaluation": "多模态AI集成要求高，需要情感计算和预测分析能力。数据隐私保护是关键挑战。技术可行性良好，但需要 careful architecture design.",
-      "comment_id": "4187685385",
-      "evaluated_at": "2026-04-04T20:16:25Z"
+      "prNumber": 765,
+      "title": "AI智能家庭照护协调与健康管理平台",
+      "score": 8.8,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/765#issuecomment-4189568113",
+      "summary": "解决家庭照护核心痛点，社会价值显著，技术架构完整"
     },
     {
-      "issue_number": 702,
-      "title": "AI智能绿色生活助手 - 从空间限制和环保困惑到可持续城市生活的个人环保革命",
-      "role": "🌱 环保创新者",
-      "evaluation": "针对城市公寓居民的环保需求填补了市场空白。结合AI空间优化和社区资源整合，具有较强的实用性和创新性。在气候变化背景下，社会价值显著。",
-      "comment_id": null,
-      "evaluated_at": "2026-04-05T21:01:00Z"
+      "prNumber": 764,
+      "title": "AI智能教学设计助手",
+      "score": 9.0,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/764#issuecomment-4189568443",
+      "summary": "教育领域优秀提案，技术深度高，实用性强，建议作为重点项目"
     },
     {
-      "issue_number": 679,
-      "title": "💡 [for 大学生群体] AI智能学习生活平衡教练 - 从碎片化学习模式和时间管理困境到科学学习效率与全面发展的大学成长革命",
-      "role": "💰 商业分析",
-      "evaluation": "大学生学习生活平衡市场潜力巨大，目标用户明确。家长付费意愿强，可通过学校合作和B2C模式变现。竞品较少，差异化明显。建议采用Freemium模式，基础功能免费，高级分析付费。复购率高，生命周期价值可观。",
-      "comment_id": "4187760798",
-      "evaluated_at": "2026-04-04T21:16:15Z"
+      "prNumber": 761,
+      "title": "AI智能自由职业全周期管理平台",
+      "score": 9.5,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/761#issuecomment-4189579474",
+      "summary": "技术深度和广度都极为出色的提案，文档质量极高，建议适当收敛范围"
     },
     {
-      "issue_number": 673,
-      "title": "💡 [for 新手父母] AI智能育儿陪伴助手 - 从育儿经验不足和焦虑困扰到科学育儿和身心放松的现代家庭育儿革命",
-      "role": "🚀 增长黑客",
-      "evaluation": "育儿市场用户粘性极高，父母为寻求解决方案愿意分享传播。K因子可期：焦虑情绪具有传染性，用户会主动推荐给朋友。可通过母婴KOL合作快速获客，社区口碑营销效果显著。建议先建立种子用户群，收集真实案例后病毒式传播。高留存率，长期价值突出。",
-      "comment_id": "4187760890",
-      "evaluated_at": "2026-04-04T21:16:19Z"
+      "prNumber": 759,
+      "title": "多项目PR (PR-736, PR-747, PR-750, PR-751, PR-752)",
+      "score": 8.0,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/759#issuecomment-4189580325",
+      "summary": "包含5个高质量子项目，建议拆分为独立PR进行评审"
+    },
+    {
+      "prNumber": 758,
+      "title": "多项目PR (PR-747, PR-750, PR-751, PR-752)",
+      "score": 8.2,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/758#issuecomment-4189580691",
+      "summary": "与PR-759内容重复，建议确认提交意图后整合"
+    },
+    {
+      "prNumber": 757,
+      "title": "多项目PR (PR-750, PR-751, PR-752)",
+      "score": 8.5,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/757#issuecomment-4189581263",
+      "summary": "与其他PR存在重复，建议整合或差异化处理"
+    },
+    {
+      "prNumber": 756,
+      "title": "多项目PR (PR-751, PR-752)",
+      "score": 8.5,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/756#issuecomment-4189581634",
+      "summary": "与其他多个PR重复，建议整合保留一个主PR"
+    },
+    {
+      "prNumber": 755,
+      "title": "AI智能乡村适应与价值重建教练",
+      "score": 9.2,
+      "status": "reviewed",
+      "comment": "https://github.com/ava-agent/awesome-ai-ideas/pull/755#issuecomment-4189582081",
+      "summary": "非常优秀的单项目PR，聚焦明确，建议优先推进实施"
     }
   ],
-  "completed_at": "2026-04-04T21:16:19Z",
-  "total_evaluated": 5
+  "recommendations": {
+    "topPicks": [
+      {
+        "prNumber": 761,
+        "reason": "技术深度最高，文档质量极好，评分9.5/10"
+      },
+      {
+        "prNumber": 755,
+        "reason": "单项目聚焦，社会价值显著，实施可行性高，评分9.2/10"
+      },
+      {
+        "prNumber": 764,
+        "reason": "教育领域优秀提案，实用性强，评分9.0/10"
+      }
+    ],
+    "issuesIdentified": [
+      {
+        "issue": "多个PR存在内容重复（PR-755, 756, 757, 758, 759都包含相同子项目）",
+        "recommendation": "建议合并重复PR，保留最完整或最聚焦的版本"
+      },
+      {
+        "issue": "部分PR包含多个子项目，不便于独立评审和实施",
+        "recommendation": "建议每个子项目提交为独立PR"
+      }
+    ],
+    "overallAssessment": "本次评审的9个PR整体质量较高，涵盖了商务旅行、家庭照护、教育、自由职业管理、创意变现、特殊教育、创意恢复、数字育儿、乡村振兴等多个领域。多数提案具有明确的社会价值和商业潜力。建议优先推进PR-761（自由职业管理平台）、PR-755（乡村振兴）和PR-764（教学设计助手）三个评分最高的项目。同时建议对存在重复内容的PR进行整合，提高评审和实施效率。",
+  "createdIssues": {
+    "lastUpdate": "2026-04-06",
+    "totalIssues": 1,
+    "issues": [
+      {
+        "issueNumber": 768,
+        "title": "💡 [for 数字游民和远程工作者] AI智能全球生活与生产力平衡教练 - 从时差混乱和文化适应困难到无缝全球化数字游民生活的平衡革命",
+        "createdAt": "2026-04-06",
+        "targetAudience": "数字游民和远程工作者",
+        "category": "生活平衡与生产力",
+        "status": "created"
+      }
+    ]
+  },
+  "evaluatedIssues": {
+    "lastUpdate": "2026-04-06",
+    "totalIssues": 2,
+    "issues": [
+      {
+        "issueNumber": 768,
+        "title": "💡 [for 数字游民和远程工作者] AI智能全球生活与生产力平衡教练 - 从时差混乱和文化适应困难到无缝全球化数字游民生活的平衡革命",
+        "evaluationRole": "🚀 增长黑客",
+        "evaluationDate": "2026-04-06",
+        "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/issues/768#issuecomment-4189619456",
+        "summary": "数字游民群体年增长率35%，首年用户数5万，3年内成为领域头部应用"
+      },
+      {
+        "issueNumber": 767,
+        "title": "💡 [for 社区组织者和活动领导者] AI智能实时决策协调中心 - 从突发事件反应慢和群体决策混乱到敏捷社区治理与高效集体行动的组织革命",
+        "evaluationRole": "💰 商业分析",
+        "evaluationDate": "2026-04-06",
+        "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/issues/767#issuecomment-4189619624",
+        "summary": "智慧城市建设带来政策红利，年市场规模超200亿，建议A轮投资500万"
+      }
+    ]
+  }
 }

@@ -1,0 +1,90 @@
+{
+  "task": "PR Review for ava-agent/awesome-ai-ideas",
+  "timestamp": "2025-06-17",
+  "status": "completed",
+  "prs_reviewed": [
+    {
+      "pr_number": 761,
+      "title": "AI智能自由职业全周期管理平台",
+      "status": "reviewed",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/761#issuecomment-4189422002",
+      "rating": {
+        "innovation": 5,
+        "utility": 4,
+        "feasibility": 3,
+        "completeness": 5
+      },
+      "recommendation": "建议批准立项但需要明确分阶段实施计划"
+    },
+    {
+      "pr_number": 759,
+      "title": "批量AI创意提交（4个项目）",
+      "status": "reviewed",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/759#issuecomment-4189422439",
+      "projects": [
+        "AI创意变现加速器",
+        "AI多感官学习平台",
+        "AI创意恢复教练",
+        "AI数字育儿教练",
+        "AI乡村适应教练"
+      ],
+      "rating": {
+        "innovation": 5,
+        "social_value": 5,
+        "commercial_viability": 4,
+        "implementation_difficulty": 3,
+        "resource_requirements": 4
+      },
+      "recommendation": "批准立项但建议分阶段实施，优先选择社会价值和商业潜力最高的项目"
+    },
+    {
+      "pr_number": 758,
+      "title": "重复提交（与PR #759重复）",
+      "status": "duplicate_detected",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/758#issuecomment-4189422818",
+      "recommendation": "关闭此重复PR，保留PR #759作为正式评审"
+    },
+    {
+      "pr_number": 757,
+      "title": "重复提交（与PR #759重复）",
+      "status": "duplicate_detected",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/757#issuecomment-4189423185",
+      "recommendation": "关闭此重复PR，保留PR #759作为正式评审"
+    },
+    {
+      "pr_number": 756,
+      "title": "重复提交（与PR #759重复）",
+      "status": "duplicate_detected",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/756#issuecomment-4189423896",
+      "recommendation": "关闭此重复PR，建立规范的提交流程"
+    },
+    {
+      "pr_number": 755,
+      "title": "重复提交（与PR #759重复）",
+      "status": "duplicate_detected",
+      "comment_url": "https://github.com/ava-agent/awesome-ai-ideas/pull/755#issuecomment-4189424419",
+      "recommendation": "关闭此重复PR，仅保留PR #759作为正式评审记录"
+    }
+  ],
+  "summary": {
+    "total_prs": 6,
+    "unique_prs": 2,
+    "duplicate_prs": 4,
+    "total_unique_projects": 6,
+    "recommendations": {
+      "approved": 2,
+      "closed_as_duplicate": 4
+    }
+  },
+  "key_findings": [
+    "PR #761: AI自由职业管理平台 - 创新性高，建议分阶段实施",
+    "PR #759: 包含5个AI创意，覆盖教育、创意、家庭、乡村等领域，社会价值突出",
+    "PR #758-755: 系统性重复提交，建议建立PR去重机制"
+  ],
+  "next_steps": [
+    "关闭重复PR（#758, #757, #756, #755）",
+    "为PR #761制定分阶段实施计划",
+    "为PR #759中的5个项目制定优先级排序",
+    "建立PR提交规范和去重机制"
+  ]
+}
