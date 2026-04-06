@@ -2,5 +2,28 @@
   "evaluated_issues": [798, 797],
   "total_evaluated": 2,
   "last_evaluation_date": "2026-04-06",
-  "failed_issues": []
+  "failed_issues": [],
+  "created_prs": [
+    {
+      "pr_number": 802,
+      "issue_number": 784,
+      "title": "AI智能家族记忆与非遗技艺传承协调平台",
+      "created_date": "2026-04-06",
+      "status": "open",
+      "social_value": "high",
+      "commercial_potential": "high"
+    },
+    {
+      "pr_number": 803,
+      "issue_number": 783,
+      "title": "AI智能危机协调与资源优化平台",
+      "created_date": "2026-04-06",
+      "status": "open",
+      "social_value": "very_high",
+      "commercial_potential": "high"
+    }
+  ],
+  "last_pr_creation_date": "2026-04-06",
+  "total_prs_created": 2,
+  "summary": "Successfully created 2 high-value PRs based on evaluated issues. Both PRs address significant social needs with strong commercial potential."
 }
