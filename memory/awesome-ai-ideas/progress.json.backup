@@ -1,13 +1,78 @@
 {
-  "last_updated": "2026-04-04T12:15:00Z",
-  "total_issues_evaluated": 0,
-  "issues": [],
-  "evaluation_roles": {
-    "product_manager": "🎯 产品经理 - 关注用户价值、市场规模",
-    "technical_expert": "👨‍💻 技术专家 - 关注实现难度、技术风险", 
-    "business_analyst": "💰 商业分析 - 关注变现可能、竞品分析",
-    "growth_hacker": "🚀 增长黑客 - 关注推广策略、增长点"
+  "last_review_date": "2026-04-06",
+  "total_prs_reviewed": 5,
+  "pr_reviews": {
+    "766": {
+      "title": "AI智能商务旅行与远程协作中枢",
+      "status": "reviewed",
+      "score": 9.2,
+      "recommendation": "推荐合并",
+      "reviewed_at": "2026-04-06T23:45:00Z"
+    },
+    "765": {
+      "title": "AI智能家庭照护协调与健康管理平台",
+      "status": "reviewed", 
+      "score": 9.5,
+      "recommendation": "推荐合并",
+      "reviewed_at": "2026-04-06T23:45:00Z"
+    },
+    "764": {
+      "title": "AI智能教学设计助手",
+      "status": "reviewed",
+      "score": 9.0,
+      "recommendation": "推荐合并",
+      "reviewed_at": "2026-04-06T23:45:00Z"
+    },
+    "761": {
+      "title": "AI智能自由职业全周期管理平台",
+      "status": "reviewed",
+      "score": 8.5,
+      "recommendation": "建议简化后合并",
+      "reviewed_at": "2026-04-06T23:45:00Z"
+    },
+    "759": {
+      "title": "AI智能创意变现与商业验证加速器",
+      "status": "reviewed",
+      "score": 8.0,
+      "recommendation": "需要完善技术细节后合并",
+      "reviewed_at": "2026-04-06T23:45:00Z"
+    }
   },
-  "retry_count": 0,
-  "max_retries": 2
+  "summary": {
+    "average_score": 8.84,
+    "high_score_count": 3,
+    "medium_score_count": 2,
+    "recommended_count": 3,
+    "conditional_recommendation_count": 2
+  },
+  "next_review_date": "2026-04-07",
+  "issues": {
+    "771": {
+      "title": "💡 [for 城市社区管理者和本地商户] AI智能社区生态协调平台 - 从社区信息孤岛和商户资源浪费到智慧城市可持续社区生态的协同革命",
+      "status": "evaluated",
+      "created_at": "2026-04-06T00:02:23Z",
+      "evaluated_at": "2026-04-06T00:15:32Z",
+      "evaluation_role": "产品经理",
+      "evaluator": "kevinten10",
+      "target_audience": "城市社区管理者和本地商户",
+      "problem_domain": "智慧城市社区发展",
+      "innovation_type": "社区生态系统优化",
+      "evaluation_summary": "社区AI生态平台精准击中城市治理现代化痛点，市场潜力巨大"
+    },
+    "731": {
+      "title": "💡 AI-Powered Code Review Assistant",
+      "status": "evaluated", 
+      "created_at": "2026-04-05T08:01:18Z",
+      "evaluated_at": "2026-04-06T00:15:37Z",
+      "evaluation_role": "技术专家",
+      "evaluator": "kevinten10",
+      "target_audience": "软件开发者",
+      "problem_domain": "代码质量保障",
+      "innovation_type": "智能代码审查",
+      "evaluation_summary": "AI代码审查助手技术实现难度中等，核心挑战在于代码理解准确性和问题识别精度"
+    }
+  },
+  "total_issues_created": 1,
+  "total_issues_evaluated": 2,
+  "last_evaluation_date": "2026-04-06T00:15:37Z"
 }
