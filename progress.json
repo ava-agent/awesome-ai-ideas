@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-04-05T04:30:00Z",
+  "lastUpdated": "2026-04-08T11:30:00Z",
   "evaluatedIssues": [
     {
       "number": 537,
@@ -63,6 +63,22 @@
       "role": "🎯 产品经理",
       "evaluation": "解决传统工艺传承危机，AR技术为年轻学习者提供沉浸式体验。社会价值重大，具有文化传承意义。商业模式可通过工具销售、课程订阅等方式实现，建议先验证核心工艺类别的用户接受度。",
       "evaluatedAt": "2026-04-05T04:28:00Z"
+    },
+    {
+      "number": 71,
+      "title": "💡 [for 职场新人(0-3年)] AI职场软技能导师 - 从不敢开口到自信表达的职场软技能提升革命",
+      "role": "🎯 产品经理",
+      "evaluation": "专为职场新人设计的AI软技能导师平台，通过场景模拟、邮件优化、会议准备等功能，帮助新人快速提升职场软技能。市场需求明确，付费意愿强烈，商业模式清晰。C2C+B2B双轨模式，变现路径明确。具备场景数据积累+用户行为数据+算法优化的复合竞争壁垒。建议优先投入开发资源。",
+      "evaluatedAt": "2026-04-08T11:30:00Z",
+      "convertedToPR": 842
+    },
+    {
+      "number": 394,
+      "title": "💡 [for 12-18岁青少年] AI情绪健康陪伴助手 - 从情绪迷茫到内心强大的青少年心理健康革命",
+      "role": "🎯 产品经理",
+      "evaluation": "专为青少年设计的AI情绪健康陪伴平台，通过多模态情绪识别、专业CBT心理疏导和智能家庭沟通桥梁，为青少年提供全方位的情绪支持。社会价值巨大，市场需求明确，技术方案可行。多模态技术+专业心理学知识+用户数据的复合壁垒。具有显著的社会影响力和公益属性，建议优先投入开发资源。",
+      "evaluatedAt": "2026-04-08T11:30:00Z",
+      "convertedToPR": 843
     }
   ],
   "totalEvaluated": 9,
@@ -96,7 +112,7 @@
       "action": "Fixed structural issues by removing template files, restoring README.md structure, and adding AI health companion to docs/",
       "issuesFixed": [
         "Removed OpenClaw template files (AGENTS.md, SOUL.md, etc.)",
-        "Restored original README.md structure", 
+        "Restored original README.md structure",
         "Added AI health companion documentation to docs/ directory",
         "Resolved merge conflicts with PR #613",
         "Added GPU memory manager as separate document in efficiency tools section"
@@ -255,7 +271,10 @@
       "prTitle": "feat: 创建两个高价值AI创意PR文档 (#629, #630)",
       "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/644",
       "branch": "feat/high-value-ideas-prs-629-630",
-      "includedIssues": [629, 630],
+      "includedIssues": [
+        629,
+        630
+      ],
       "createdAt": "2026-04-03T11:43:00Z",
       "status": "created"
     },
@@ -264,7 +283,11 @@
       "prTitle": "feat: 创建3个高价值AI创意PR文档 (#644, #646, #642)",
       "prUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/647",
       "branch": "feat/high-value-ideas-batch-2",
-      "includedIssues": [644, 646, 642],
+      "includedIssues": [
+        644,
+        646,
+        642
+      ],
       "createdAt": "2026-04-03T13:33:00Z",
       "status": "created"
     }
