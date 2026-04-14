@@ -1,46 +1,38 @@
 {
-  "evaluated_issues": [
+  "lastReviewDate": "2026-04-11",
+  "reviewedPRs": [
     {
-      "issue_number": 697,
-      "title": "AI智能安全守护与紧急响应系统 - 从安全隐患和孤立无援到全天候守护与即时援助的居家安全保障革命",
-      "role": "🎯 产品经理",
-      "evaluation": "目标用户群体庞大且需求迫切，市场规模可观。解决真实痛点，社会价值显著，商业潜力巨大。建议优先推进。",
-      "comment_id": "4187685299",
-      "evaluated_at": "2026-04-04T20:16:21Z"
+      "number": 929,
+      "title": "MealForge - AI Weekly Meal Planner & Smart Shopping Assistant",
+      "verdict": "needs-revision",
+      "reviewDate": "2026-04-11",
+      "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/929#issuecomment-4227359416"
     },
     {
-      "issue_number": 681,
-      "title": "AI智能孕产期职业可持续发展教练 - 从孕期工作压力和职业断层焦虑到科学职场规划与家庭和谐平衡的现代女性职业革命",
-      "role": "👨‍💻 技术专家",
-      "evaluation": "多模态AI集成要求高，需要情感计算和预测分析能力。数据隐私保护是关键挑战。技术可行性良好，但需要 careful architecture design.",
-      "comment_id": "4187685385",
-      "evaluated_at": "2026-04-04T20:16:25Z"
-    },
-    {
-      "issue_number": 702,
-      "title": "AI智能绿色生活助手 - 从空间限制和环保困惑到可持续城市生活的个人环保革命",
-      "role": "🌱 环保创新者",
-      "evaluation": "针对城市公寓居民的环保需求填补了市场空白。结合AI空间优化和社区资源整合，具有较强的实用性和创新性。在气候变化背景下，社会价值显著。",
-      "comment_id": null,
-      "evaluated_at": "2026-04-05T21:01:00Z"
-    },
-    {
-      "issue_number": 679,
-      "title": "💡 [for 大学生群体] AI智能学习生活平衡教练 - 从碎片化学习模式和时间管理困境到科学学习效率与全面发展的大学成长革命",
-      "role": "💰 商业分析",
-      "evaluation": "大学生学习生活平衡市场潜力巨大，目标用户明确。家长付费意愿强，可通过学校合作和B2C模式变现。竞品较少，差异化明显。建议采用Freemium模式，基础功能免费，高级分析付费。复购率高，生命周期价值可观。",
-      "comment_id": "4187760798",
-      "evaluated_at": "2026-04-04T21:16:15Z"
-    },
-    {
-      "issue_number": 673,
-      "title": "💡 [for 新手父母] AI智能育儿陪伴助手 - 从育儿经验不足和焦虑困扰到科学育儿和身心放松的现代家庭育儿革命",
-      "role": "🚀 增长黑客",
-      "evaluation": "育儿市场用户粘性极高，父母为寻求解决方案愿意分享传播。K因子可期：焦虑情绪具有传染性，用户会主动推荐给朋友。可通过母婴KOL合作快速获客，社区口碑营销效果显著。建议先建立种子用户群，收集真实案例后病毒式传播。高留存率，长期价值突出。",
-      "comment_id": "4187760890",
-      "evaluated_at": "2026-04-04T21:16:19Z"
+      "number": 930,
+      "title": "RePrice AI - 二手物品智能估价与最优出售策略助手",
+      "verdict": "approved-with-suggestions",
+      "reviewDate": "2026-04-11",
+      "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/pull/930#issuecomment-4227359415"
     }
   ],
-  "completed_at": "2026-04-04T21:16:19Z",
-  "total_evaluated": 5
+  "totalReviewed": 2,
+  "issues": [
+    {
+      "number": 936,
+      "title": "StoryKeeper - AI家族记忆传承助手",
+      "role": "🎯 产品经理",
+      "created": "2026-04-11",
+      "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/issues/936#issuecomment-4227566411",
+      "evalDate": "2026-04-11"
+    },
+    {
+      "number": 938,
+      "title": "PlantPal AI - 阳台种植助手",
+      "role": "👨‍💻 技术专家",
+      "created": "2026-04-11",
+      "commentUrl": "https://github.com/ava-agent/awesome-ai-ideas/issues/938#issuecomment-4227566409",
+      "evalDate": "2026-04-11"
+    }
+  ]
 }
