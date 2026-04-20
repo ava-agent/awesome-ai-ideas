@@ -1,0 +1,57 @@
+# 核心框架
+fastapi==0.104.1
+uvicorn==0.24.0
+pydantic==2.5.0
+
+# 数据处理
+numpy==1.24.3
+pandas==2.0.3
+scipy==1.11.4
+
+# 机器学习和AI
+torch==2.1.2
+transformers==4.35.2
+scikit-learn==1.3.2
+tensorflow==2.15.0
+
+# 信号处理
+mne==1.6.1
+biosppy==2.1.0
+
+# 计算机视觉
+opencv-python==4.8.1.78
+mediapipe==0.10.7
+face-recognition==1.3.0
+
+# 脑机接口
+pybci==0.1.2
+neuropython==0.2.1
+
+# 数据库
+sqlalchemy==2.0.23
+alembic==1.12.1
+psycopg2-binary==2.9.9
+
+# 缓存
+redis==5.0.1
+
+# API和通信
+httpx==0.25.2
+websockets==12.0
+
+# 配置管理
+python-dotenv==1.0.0
+pyyaml==6.0.1
+
+# 监控和日志
+loguru==0.7.2
+prometheus-client==0.19.0
+
+# 测试
+pytest==7.4.3
+pytest-asyncio==0.21.1
+
+# 工具库
+requests==2.31.0
+aiofiles==23.2.1
+python-multipart==0.0.6
