@@ -8,7 +8,7 @@
 
 <br>
 
-<a href="#-效率工具">浏览创意</a> &nbsp;&middot;&nbsp;
+<a href="#-提案目录">浏览创意</a> &nbsp;&middot;&nbsp;
 <a href="./TEMPLATE.md">提交想法</a> &nbsp;&middot;&nbsp;
 <a href="../../issues">参与讨论</a> &nbsp;&middot;&nbsp;
 <a href="./README_EN.md">English</a>
@@ -48,8 +48,7 @@
 
 - [不只是灵感列表](#-不只是灵感列表)
 - [精选推荐](#-精选推荐)
-- **创意目录**
-  - [效率工具 (13)](#-效率工具) · [知识学习 (6)](#-知识学习) · [职业成长 (10)](#-职业成长) · [创意娱乐 (5)](#-创意娱乐) · [消费决策 (5)](#-消费决策) · [生活服务 (17)](#-生活服务) · [社交沟通 (6)](#-社交沟通)
+- [提案目录 (45)](#-提案目录)
 - [创意统计](#-创意统计)
 - [如何参与](#-如何参与)
 - [Star History](#star-history)
@@ -109,42 +108,42 @@
 <tr>
 <td width="50%" valign="top">
 
-### [AI 二手物品定价师](./pr/ai-secondhand-pricing-agent.md) `⭐`
-拍张照片，AI 3 秒给出精准估价 + 生成吸睛描述，从纠结 3 天到 10 分钟上架卖出。
+### [NewRoots AI](./prs/1208-newroots-ai.md) `⭐`
+AI驱动的移民融入平台，帮助新移民快速适应当地生活，解决语言、就业、法律等核心挑战。
 
 </td>
 <td width="50%" valign="top">
 
-### [AI 晋升导航员](./pr/2026-03-26-ai-promotion-navigator.md) `⭐`
-识别能力短板，生成 3 个月冲刺计划，从被动等机会到主动设计晋升路径。
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-### [AI 租房看房侦探](./ideas/rental-detective/README.md) `🟢`
-拍照合同，AI 3 秒标注风险条款，10 分钟看出房源猫腻。完整的 OCR 识别方案和法律知识库设计。
-
-</td>
-<td width="50%" valign="top">
-
-### [AI 破冰对话教练](./pr/2026-03-25-ai-icebreaker-coach.md) `⭐`
-社恐遇到领导时，AI 实时推送 3 个破冰话题。融合场景感知和关系图谱的对话推荐系统。
+### [NeuroBalance AI](./prs/1134-neurobalance-ai.md) `⭐`
+实时脑模式分析系统，在情绪失调发生前进行预测性干预，守护全球超10亿心理健康人群。
 
 </td>
 </tr>
 <tr>
 <td width="50%" valign="top">
 
-### [AI 知识产品化助手](./pr/knowledge-productizer.md) `⭐`
-7 天把专业经验变成可售卖课程。对话式引导 + 自动课程大纲生成 + 内容质量评估。
+### [AI Code Analysis Tool](./prs/1098-ai-code-analysis-tool.md) `⭐`
+智能代码审查与重构建议平台，让开发者写出更高质量、更易维护的代码。
 
 </td>
 <td width="50%" valign="top">
 
-### [AI 咖啡风味探索师](./pr/2026-03-26-ai-coffee-flavor-explorer.md) `⭐`
-拍下豆袋标签，AI 引导品鉴训练，从只喝拿铁到盲喝猜产区。
+### [MindCanvas AI](./prs/1104-mindcanvas-ai.md) `⭐`
+打破创作壁垒的脑机接口艺术平台，让人类想象力直接转化为视觉艺术作品。
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+### [GigFlex AI](./prs/1210-gigflex-ai.md) `⭐`
+零工经济全周期AI赋能平台，为自由职业者提供财务稳定、技能发展和社区支持。
+
+</td>
+<td width="50%" valign="top">
+
+### [ChainShield AI](./prs/1096-chainshield-ai.md) `⭐`
+从被动危机应对到主动供应链韧性，AI驱动的风险预测与自动化管理平台。
 
 </td>
 </tr>
@@ -152,129 +151,57 @@
 
 ---
 
-> **状态说明** — ⭐ 详细设计（经过 PR 评审）| 🟢 可开发（已评审）| 💡 提案中（待讨论）
+> **状态说明** — 以下 45 个创意均经过 PR 评审，包含完整的技术方案和商业分析。
 
-## 🤖 效率工具
+## 📋 提案目录
 
-_自动化重复劳动、管理日常事务的 AI 工具。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [Edge AI 部署框架](./pr/edge-ai-deployment-framework-278.md) | 让大模型在手机、IoT、汽车上高效运行，SmoothQuant+GPTQ 量化 | ⭐ |
-| [AI 浏览器代理调度器](./prs/ai-browser-agent-orchestrator.md) | 定义一次任务 DSL，10 个 Agent 并行执行，2 小时变 5 分钟 | ⭐ |
-| [AI 文件柜管家](./prs/0217-ai-file-cabinet-butler.md) | 纸质文档拍照即归档，从翻箱倒柜 2 小时到 3 秒搜出 | ⭐ |
-| [AI Workspace Orchestrator](./ai-workspace-orchestrator.md) | 用聊天界面管理多 AI 工作流，团队效率提升 | 🟢 |
-| [AI 邮件智能管家](./ideas/ai-email-manager.md) | 让收件箱自己整理自己，自动分类、提取行动项 | 🟢 |
-| [AI 预约管家](./ideas/ai-appointment-manager.md) | 截图识别预约信息，提前 3 天自动提醒，不怕预约撞车 | 🟢 |
-| [AI 订阅管家](./ideas/ai-subscription-manager.md) | 智能追踪数字订阅，发现闲置服务，每月省下冤枉钱 | 🟢 |
-| [AI 智能合同阅读助手](./ideas/ai-contract-reader.md) | 拍照即分析法律条款，风险一目了然 | 🟢 |
-| [AI PR 自动摘要](./ideas/ai-pr-summary-analyzer.md) | AI 分析 PR 变更，生成摘要、分类影响，Code Review 更高效 | 🟢 |
-| [AI 每日简报助手](./ideas/ai-daily-briefing.md) | 每天早上，AI 为你生成个性化技术新闻摘要 | 🟢 |
-| [AI 会议健康守护者](./ideas/ai-meeting-health-guardian.md) | 智能守护会议健康，自动提醒休息、会后恢复建议 | 🟢 |
-| [AI 数字断舍离助手](./ideas/ai-digital-declutter-assistant.md) | 智能分析数字生活，一键清理数字囤积 | 🟢 |
-| [AI 任务拆解启动器](./proposals/task-decomposer.md) | 3 秒拆成 5 分钟微步骤，专治拖延症 | 💡 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 📚 知识学习
-
-_更高效地获取、整理和内化知识的 AI 助手。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 知识产品化助手](./pr/knowledge-productizer.md) | 7 天把专业经验变成可售卖课程，实现知识变现 | ⭐ |
-| [AI 书籍消化助手](./prs/200-ai-book-digest-assistant.md) | 从买书如山倒到每周消化一本书，个性化阅读推荐 | ⭐ |
-| [AI 遗忘曲线复习助手](./ideas/spaced-repetition-system.md) | 基于艾宾浩斯遗忘曲线，在最优时间点推送复习（[RFC](./docs/rfc/rfc-reading-knowledge-assimilation.md)） | 🟢 |
-| [AI 代码库知识地图](./ideas/code-knowledge-map-generator.md) | 自动分析代码库，生成交互式知识地图，新人快速上手 | 🟢 |
-| [AI 语音笔记结构化助手](./ideas/ai-voice-notes-organizer.md) | 语音输入自动转为结构化笔记，智能分类关联 | 🟢 |
-| [AI 语音笔记整理师](./ideas/voice-notes-structure.md) | 让零散的语音想法自动井井有条 | 🟢 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 💼 职业成长
-
-_面试、演讲、谈判、晋升 — 加速职业发展的 AI 教练。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 英语口语陪练](./pr/ai-english-speaking-coach.md) | 雅思考前每天练 30 分钟，省下每小时 200 元外教课费用 | ⭐ |
-| [AI 晋升导航员](./pr/2026-03-26-ai-promotion-navigator.md) | 识别能力短板，生成 3 个月晋升冲刺计划 | ⭐ |
-| [AI 演讲自信教练](./prs/0157-speech-confidence-coach.md) | 汇报前 30 分钟陪练开场白，从上台腿抖到从容控场 | ⭐ |
-| [AI 拖延模式分析师](./prs/ai-procrastination-analyzer.md) | 找到拖延根因，3 天从「明天一定改」的循环中解脱 | ⭐ |
-| [AI 面试场景模拟教练](./ideas/ai-interview-coach.md) | 模拟真实面试场景，从紧张卡壳到从容应答 | 🟢 |
-| [AI 职场软技能导师](./ideas/ai-career-soft-skills-coach.md) | 会议前 10 分钟生成发言要点和问答预案 | 🟢 |
-| [AI 技术会议发言教练](./ideas/ai-tech-meeting-speaking-coach.md) | 专治「开会不敢说话」的技术人，实时提示关键问题 | 🟢 |
-| [AI 口语陪练伴侣](./ideas/ai-speaking-companion.md) | 24/7 外语陪练，场景化对话 + 实时纠音 | 🟢 |
-| [AI 错误信息诊断师](./ideas/ai-error-diagnostician.md) | 一键诊断错误根因，基于上下文提供精准修复方案 | 🟢 |
-| [AI 薪资谈判教练](./proposals/ai-salary-negotiation-coach.md) | 拍照 offer，AI 3 秒分析是否被压价，生成谈判话术 | 💡 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 🎮 创意娱乐
-
-_释放创造力，让 AI 成为你的故事共创者。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 创意搭档](./pr/ai-creative-partner-296.md) | 从创作焦虑卡壳到灵感持续涌现的 AI 协作引擎 | ⭐ |
-| [AI 故事世界共创师](./pr/2026-03-25-ai-story-world-creator.md) | 10 秒进入角色扮演世界，从被动刷视频到主动创造故事 | ⭐ |
-| [AI 爆款标题猎手](./prs/187-viral-title-hunter.md) | 10 秒生成 5 个带情绪钩子的标题，专治标题焦虑 | ⭐ |
-| [AI 桌游规则翻译官](./prs/192-ai-boardgame-rule-translator.md) | 拍照 10 秒获得 3 句核心玩法，从听 3 遍还懵到看一眼就会 | ⭐ |
-| [AI 照片故事生成器](./ideas/ai-photo-story-generator.md) | 一键将照片变成精美的故事回忆 | 🟢 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 🛍️ 消费决策
-
-_更聪明地买、更精准地选 — AI 驱动的消费决策。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 购物决策助手](./pr/2026-03-25-ai-shopping-assistant.md) | 3 秒识别刷评水军，发现真实低价，每笔订单省 30% | ⭐ |
-| [AI 二手物品定价师](./pr/ai-secondhand-pricing-agent.md) | 拍照 3 秒精准估价 + 生成吸睛描述，10 分钟上架 | ⭐ |
-| [AI 咖啡风味探索师](./pr/2026-03-26-ai-coffee-flavor-explorer.md) | 拍豆袋标签，引导品鉴训练，从只喝拿铁到盲猜产区 | ⭐ |
-| [AI 护肤顾问](./pr/skincare-advisor.md) | 拍脸 5 秒懂肌肤，告别盲目买买买，一年省 2000 | ⭐ |
-| [AI 穿搭决策顾问](./ideas/ai-outfit-decision-advisor.md) | 拍照衣柜说需求，3 秒获得 3 套专业搭配建议 | 🟢 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 🏠 生活服务
-
-_租房、搬家、旅行、健身、宠物 — AI 让日常生活更轻松。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 宠物健康守护者](./pr/ai-pet-health-guardian-360.md) | AI 健康管家，智能监测实现全生命周期守护 | ⭐ |
-| [AI 乖狗训练师](./pr/ai-dog-trainer.md) | AI 分析训练视频，30 天教会坐下握手，省下几千块训犬课 | ⭐ |
-| [AI 健身动作纠错镜](./prs/199-fitness-form-coach.md) | 实时识别关节角度，从深蹲腰酸到每个动作都标准有效 | ⭐ |
-| [AI 停车位猎人](./prs/196-ai-parking-hunter.md) | 3 秒看到空位导航，从绕 3 圈找不到到直奔空位 | ⭐ |
-| [AI 租房看房侦探](./ideas/rental-detective/README.md) | 拍照合同，AI 3 秒标注风险条款，10 分钟看出猫腻 | 🟢 |
-| [AI 境外游翻译官](./ideas/ai-travel-translator.md) | 不只是翻译，更是当地文化解读 | 🟢 |
-| [AI 宠物健康日志分析师](./ideas/ai-pet-health-analyst.md) | 通过日常记录提前发现宠物健康问题 | 🟢 |
-| [AI 礼物推荐助手](./ideas/gift-recommendation-assistant.md) | 基于关系画像和实时热点，告别送礼焦虑 | 🟢 |
-| [AI 个人能源管家](./ideas/energy-assistant.md) | 拍照账单 3 秒识别异常用电，及时止损 | 🟢 |
-| [AI 维权证据助手](./ideas/ai-rights-evidence-assistant.md) | AI 3 秒生成专业投诉文书 + 维权路径指引 | 🟢 |
-| [AI 跑步陪练](./ideas/ai-running-coach.md) | 实时语音鼓励和配速指导，3 周完成首个 5 公里 | 🟢 |
-| [AI 搬家打包指挥官](./ideas/moving-assistant.md) | 拍照识别物品，从手忙脚乱 3 天到半天井然有序 | 🟢 |
-| [AI 碳足迹追踪助手](./ai-carbon-footprint-tracker.md) | 从模糊环保概念到每天可量化的绿色生活 | 🟢 |
-| [AI 园艺设计师](./ai-gardening-designer.md) | 从植物杀手到打造阳台小森林的 AI 养护系统 | 🟢 |
-| [AI 家庭健康哨兵](./ai-family-health-guardian.md) | 远程实时关注独居老人健康状况 | 🟢 |
-| [AI 宠物行为翻译官](./proposals/pet-behavior-translator.md) | 拍摄视频，AI 即时翻译宠物行为含义 | 💡 |
-
-**[⬆ 返回顶部](#awesome-ai-ideas)**
-
-## 🗣️ 社交沟通
-
-_破冰、跨代沟通、数字素养 — AI 助力人际连接。_
-
-| 创意 | 一句话卖点 | 状态 |
-|------|-----------|------|
-| [AI 破冰对话教练](./pr/2026-03-25-ai-icebreaker-coach.md) | 社恐遇到领导时，AI 实时推送 3 个破冰话题 | ⭐ |
-| [AI 数字技能陪练](./pr/digital-skills-coach.md) | 60 岁也能独立操作手机，不再求助儿女 | ⭐ |
-| [AI 代际沟通翻译官](./ideas/ai-intergenerational-translator.md) | 让父母和成年子女真正听懂彼此 | 🟢 |
-| [AI 聚会召集官](./ideas/ai-meeting-organizer.md) | AI 5 分钟锁定聚会时间地点，告别讨论 3 天定不下来 | 🟢 |
-| [AI 数字防骗小卫士](./ai-safety-guardian.md) | 专为老年人设计的智能防骗助手，安全畅享数字生活 | 🟢 |
-| [AI 方言传承助手](./proposals/ai-dialect-heritage-assistant.md) | 录下方言祝福，让乡音在家族中代代相传 | 💡 |
+| Issue | 创意标题 | 一句话描述 |
+|-------|----------|------------|
+| #1085 | LearnAI Tutor - AI-Powered Interactive Learning Platform | LearnAI Tutor transforms passive video learning into dynamic, interactive experiences using PAL (Personal A... |
+| #1091 | Adaptive Learning Systems: Integrating Sleep Science with AI P... | Adaptive Learning Systems represents a revolutionary approach to education and personal development by inte... |
+| #1096 | ChainShield AI - From reactive crisis response to proactive su... | ChainShield AI transforms enterprise supply chain management by shifting from reactive crisis management to... |
+| #1098 | AI Code Analysis Tool - Intelligent Code Review, Refactoring S... | AI Code Analysis Tool is an intelligent code quality platform that revolutionizes how developers write, rev... |
+| #1099 | AI Web Automation and Testing Framework - From intelligent int... | AI Web Automation and Testing Framework represents a revolutionary approach to web automation that transfor... |
+| #1104 | MindCanvas AI - From creative barriers to direct brain-to-arti... | MindCanvas AI represents a revolutionary leap in creative technology, bridging the gap between human imagin... |
+| #1111 | AI Safety Guardian | The recent attack on OpenAI CEO Sam Altman's home highlights growing public concerns about AI safety and th... |
+| #1113 | Long-Horizon Reasoning Engine | Current AI models fundamentally struggle with long-horizon reasoning tasks, with frontier models like GPT 5... |
+| #1114 | Adaptive Reasoning Coach | Current reinforcement learning (RL) approaches for AI reasoning are fundamentally limited because they oper... |
+| #1115 | Intuitive Robot OS | Traditional robotics requires precise programming for every task, making it inaccessible to non-experts and... |
+| #1116 | Persuasion AI Engine | Current LLMs have implicit understanding of rhetoric but lack the ability to systematically analyze and gen... |
+| #1117 | Personalized AI Ecosystem | Current AI evaluation is fundamentally one-size-fits-all. Models are benchmarked on standardized tests that... |
+| #1118 | Open Source LLM Fine-tuning Framework | ### The Democratization Crisis in AI Model Development Large Language Models (LLMs) have revolutionized AI ... |
+| #1125 | Intelligent Inference Acceleration: Dynamic Prediction Optimiz... | 随着大语言模型(LLM)规模持续增长和用户期望实时响应，推理效率已成为制约AI应用落地的关键瓶颈。当前主流推理方法如自回归解码(autoregressive decoding)存在根本性缺陷：顺序生成过程导致时间复... |
+| #1126 | AI-Powered Code Review Assistant with Context Awareness | ### The Code Review Crisis in Modern Development Code review is the cornerstone of software quality, yet it... |
+| #1127 | AI-Powered Accessibility Checker with Real-Time Remediation | ### The Accessibility Crisis in Digital Development With over 1.3 billion people worldwide living with some... |
+| #1128 | AI-Powered Documentation Generator with Usage Pattern Analysis | ### The Documentation Crisis in Software Development Documentation is the silent backbone of software devel... |
+| #1129 | AI-Powered Personalized Learning Path Generator for Developers | ### The Crisis in Developer Education The technology landscape evolves at an unprecedented pace, with new f... |
+| #1130 | AI-Powered Code Carbon Footprint Analyzer | ### The Growing Environmental Crisis in Software Development As software becomes increasingly pervasive in ... |
+| #1131 | ComplyGuard AI: AI-Powered Compliance Risk Management System | 该解决方案具有明确的市场需求、技术可行性和商业价值，有望成为合规科技领域的标杆产品。 |
+| #1134 | NeuroBalance AI | Mental health challenges affect over 1 billion people globally, with emotional dysregulation being a core s... |
+| #1151 | AI Guardian Network: Self-Healing Governance Framework for Aut... | The rapid advancement of autonomous AI agents has created unprecedented governance challenges: - **78% of o... |
+| #1152 | HospitalityWise AI - AI-Powered Hospitality Optimization Platform | HospitalityWise AI is an intelligent platform designed specifically for small and independent hospitality b... |
+| #1153 | ComplyGuard AI: AI-Powered Automated Governance and Risk Intel... | In today's complex regulatory environment, enterprises face unprecedented compliance challenges: - **2,000+... |
+| #1154 | 💡 GigWise AI - From income volatility and administrative chaos... | Issue #{1154} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1155 | 💡 MolDesign AI - From 10-year discovery timelines and .6B cost... | Issue #{1155} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1156 | EmoSense AI: AI-Powered Emotional Intelligence Platform for Re... | In today's hyper-connected yet emotionally disconnected world, urban professionals and remote workers face ... |
+| #1160 | ElderCare AI - From isolation and healthcare navigation challe... | Issue #{1160} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1161 | 💡 Caregiver AI Companion - From burnout and information chaos ... | Issue #{1161} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1162 | 💡 AI SafetyMate - From workplace accidents and language barrie... | Issue #{1162} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1163 | 💡 AbleAI - From information barriers and social isolation to A... | Issue #{1163} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1164 | 💡 MindGuard AI - From mental health stigma and isolation to AI... | Issue #{1164} addresses a critical challenge in the target domain by leveraging AI technology to provide in... |
+| #1174 | Adaptive Multimodal AI Architecture for Edge Devices | However, these devices operate under strict constraints: Limited compute: CPU/GPU/NPU resources vary wildly... |
+| #1175 | Multilingual Medical AI Assistant with Multimodal Capabilities | ### The Global Healthcare Language Gap Healthcare systems worldwide face a critical challenge: **language b... |
+| #1181 | Smart Supply Chain Compliance Management Platform | Target Market: Manufacturing companies with annual revenue exceeding 楼1 billion, managing global supply net... |
+| #1201 | FinanceWise - AI-Driven Investment Research Platform | FinanceWise is a comprehensive AI-powered investment research platform designed to revolutionize how financ... |
+| #1204 | EmoBridge - Rehabilitation Therapy Emotional Bridge | EmoBridge is an AI-powered emotional bridging platform designed for rehabilitation therapy, leveraging mult... |
+| #1208 | NewRoots AI - AI-Powered Immigrant Integration Platform | Problem Background and User Pain Points NewRoots AI addresses the critical challenges faced by immigrants a... |
+| #1210 | GigFlex AI - Zero-Gig Economy Full-Cycle AI Empowerment Platform | GigFlex AI is a comprehensive AI-powered platform designed specifically for gig economy workers, addressing... |
+| #1212 | TeachAssist AI - AI-Powered Teaching Excellence and Work-Life ... | With 42% of teachers considering leaving the profession within 5 years and educators spending 15-20 hours w... |
+| #1213 | TruthStream AI 鈥?AI-Powered Journalistic Excellence and Media ... | Problem Background & User Pain Points 3. |
+| #833 | AI智能灾害协调与生命救援优化平台 - 从信息碎片化和救援效率低下到AI驱动的精准灾害响应与生命安全保障革命 | 全链条覆盖: 预警→响应→救援→恢复完整生命周期 2. |
+| #921 | PainLens AI - 从发作被动忍受到AI驱动的个性化诱因识别与疼痛预测管理助手 | 语音多模态低负担记录: 发作时一键语音即可完成记录 2. |
+| #995 | FieldFix AI - 从技术文档缺失和沟通壁垒到AI驱动的现场技术支持与知识传承平台 | 专为现场环境设计: 轻量化、离线优先、语音交互 2. |
+| #- | 💡 LogiChain AI - 从 供应链混乱到 智能协同 | 该解决方案针对制造和零售行业的核心痛点，提供从预测到优化、从监控到协同的全方位能力，有望成为供应链数字化领域的标杆产品，为企业创造显著的经济价值和社会价值。 |
 
 **[⬆ 返回顶部](#awesome-ai-ideas)**
 
