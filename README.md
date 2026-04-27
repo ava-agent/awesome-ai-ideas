@@ -303,3 +303,11 @@ awesome-ai-ideas/
 **[Issue 追踪](../../issues) &nbsp;&middot;&nbsp; [Pull Requests](../../pulls) &nbsp;&middot;&nbsp; [联系我们](mailto:kevinten10@gmail.com)**
 
 </div>
+
+## 💰 Bounty Contribution
+
+- **Task:** 💡 [for Immigrants & Refugees] NewRoots AI - From cultural isolation and integrat
+- **Reward:** $5000
+- **Source:** GitHub-Paid
+- **Date:** 2026-04-27
+
