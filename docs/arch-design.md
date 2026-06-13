@@ -1,11 +1,3 @@
-# LogiChain AI - Architecture Design
+# LogiChain AI 架构方案
 
-**Microservices Architecture with Event-Driven AI Core**
-
-Architecture combines AI prediction engine, blockchain transparency layer, and digital twin visualization hub. Core services: (1) Data ingestion gateway with 50+ ERP/SAP connectors, (2) ML prediction service using LSTM networks for demand forecasting, (3) Blockchain oracle for immutable supply chain records, (4) Real-time dashboard with WebSocket streaming.
-
-Tech stack: Python Django API, TensorFlow models, Hyperledger Fabric blockchain, Three.js 3D visualization. Scalable container orchestration using Kubernetes with auto-scaling based on data processing loads.
-
-Data flows: Raw supply chain data → AI preprocessing → Prediction models → Blockchain verification → Visualization APIs → Client dashboards. Implements event-driven architecture with Kafka messaging for real-time updates across enterprise ecosystems.
-
-Security: Multi-layer encryption, role-based access control, zero-trust network architecture. APIs designed for enterprise-grade integration with existing manufacturing/retail ERP systems.
+采用“数据接入层—智能决策层—业务应用层—治理运维层”四层架构。数据接入层对接 ERP/WMS/TMS、供应商、物流与市场事件，先用标准连接器和数据质量校验沉淀统一供应链画像；智能决策层构建需求预测、库存优化、风险预警与数字孪生仿真模型，保留人工审批与可解释输出；业务应用层提供控制塔、异常工单、方案推荐和ROI看板；治理运维层负责权限、审计、模型监控、灰度发布与数据隔离。MVP聚焦单企业单链路，验证降本和交付稳定性后扩展多企业协同。
