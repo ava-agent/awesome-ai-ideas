@@ -1,7 +1,5 @@
 # 项目健康巡检 2026-06-13
 
-| 状态 | 项目 | git status --short | 最新提交 |
-|---|---|---|---|
-| 🟢健康 | appointment-manager | clean | `0b38bdf Initial commit: AI 预约管家项目启动` |
-| 🔴异常 | src | 非Git仓库 | `-` |
-| 🔴异常 | logs | 非Git仓库 | `-` |
+- ai-appointment-manager: 健康；工作区干净；最新提交：8aec7d3 feat: small improvement
+- ai-carbon-footprint-tracker: 警告；未提交改动： M src/controllers/carbonController.ts;?? docs/API.md；最新提交：d04c1fc docs: cicd check
+- ai-career-soft-skills-coach-bak: 健康；工作区干净；最新提交：7ebd0e6 docs: frontend review
