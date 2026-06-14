@@ -1,85 +1,114 @@
-# 进度与阻塞检查 — 2026-06-14
+# Progress & Blocker Check - 2026-06-14 18:30 Asia/Shanghai
 
-执行时间：2026-06-14 00:03:50 CST
+Source event: cron `40718913-93ef-481b-896c-af56534ee05b`.
 
-## 1. 状态统计（从 idea-tracker.json 的 ideas 重新统计）
+## Method
 
-总想法数：4
-
-- high-value: 4
-
-## 2. 想法明细与仓库映射
-
-- `logi-chain-ai` — status: `high-value`; repo映射: 无
-- `gigflex-ai` — status: `high-value`; repo映射: 无
-- `mindscape-ai` — status: `high-value`; repo映射: 无
-- `buildsafe-ai` — status: `high-value`; repo映射: 无
-
-### 想法无仓库映射
-
-- `logi-chain-ai`
-- `gigflex-ai`
-- `mindscape-ai`
-- `buildsafe-ai`
-
-> 说明：本节仅按 idea-tracker.json 中 ideas 对象各项显式字段判断，未将想法名称猜作目录。
-
-## 3. 真实仓库来源
-
-真实仓库列表来自：
+- Tracker read from `/Users/wangshihao/projects/openclaws/idea-tracker.json`.
+- Status statistics were recalculated directly from `ideas[*].status`; the potentially stale `stats` object was not used.
+- Real repositories were discovered only with:
 
 ```bash
 find /Users/wangshihao/projects/openclaws -mindepth 2 -maxdepth 2 -type d -name .git
 ```
 
-发现真实仓库数：18
+- Two real repositories were sampled for `git log --oneline -1` and `git status --short`:
+  - `/Users/wangshihao/projects/openclaws/awesome-ai-ideas`
+  - `/Users/wangshihao/projects/openclaws/ai-appointment-manager`
+
+## Recomputed Idea Status Statistics
+
+Total ideas in tracker: **4**
+
+| Status | Count |
+| --- | ---: |
+| high-value | 4 |
+
+Tracked ideas:
+
+| Idea key | Name | Status | Priority | Score |
+| --- | --- | --- | ---: | ---: |
+| `logi-chain-ai` | LogiChain AI | high-value | 6 | 8.0 |
+| `gigflex-ai` | GigFlex AI | high-value | 2 | 8.4 |
+| `mindscape-ai` | MindScape AI | high-value | 4 | 8.0 |
+| `buildsafe-ai` | BuildSafe AI | high-value | 3 | 8.3 |
+
+## Real Repository Discovery
+
+Discovered repositories:
+
+- `/Users/wangshihao/projects/openclaws/ai-appointment-manager`
+- `/Users/wangshihao/projects/openclaws/ai-carbon-footprint-tracker`
+- `/Users/wangshihao/projects/openclaws/ai-career-soft-skills-coach-bak`
+- `/Users/wangshihao/projects/openclaws/ai-contract-reader`
+- `/Users/wangshihao/projects/openclaws/ai-email-manager`
+- `/Users/wangshihao/projects/openclaws/ai-error-diagnostician`
+- `/Users/wangshihao/projects/openclaws/ai-family-health-guardian`
+- `/Users/wangshihao/projects/openclaws/ai-gardening-designer`
+- `/Users/wangshihao/projects/openclaws/ai-interview-coach`
+- `/Users/wangshihao/projects/openclaws/ai-rental-detective`
+- `/Users/wangshihao/projects/openclaws/ai-voice-notes-organizer`
+- `/Users/wangshihao/projects/openclaws/ai-workspace-orchestrator`
+- `/Users/wangshihao/projects/openclaws/appointment-manager`
+- `/Users/wangshihao/projects/openclaws/awesome-ai-ideas`
+- `/Users/wangshihao/projects/openclaws/career-soft-skills-coach`
+- `/Users/wangshihao/projects/openclaws/code-knowledge-map-generator`
+- `/Users/wangshihao/projects/openclaws/error-diagnostician`
+- `/Users/wangshihao/projects/openclaws/romance-of-three-claws`
+
+## Sampled Repository State
+
+### `/Users/wangshihao/projects/openclaws/awesome-ai-ideas`
+
+Latest commit:
 
 ```text
-/Users/wangshihao/projects/openclaws/ai-appointment-manager/.git
-/Users/wangshihao/projects/openclaws/ai-carbon-footprint-tracker/.git
-/Users/wangshihao/projects/openclaws/ai-career-soft-skills-coach-bak/.git
-/Users/wangshihao/projects/openclaws/ai-contract-reader/.git
-/Users/wangshihao/projects/openclaws/ai-email-manager/.git
-/Users/wangshihao/projects/openclaws/ai-error-diagnostician/.git
-/Users/wangshihao/projects/openclaws/ai-family-health-guardian/.git
-/Users/wangshihao/projects/openclaws/ai-gardening-designer/.git
-/Users/wangshihao/projects/openclaws/ai-interview-coach/.git
-/Users/wangshihao/projects/openclaws/ai-rental-detective/.git
-/Users/wangshihao/projects/openclaws/ai-voice-notes-organizer/.git
-/Users/wangshihao/projects/openclaws/ai-workspace-orchestrator/.git
-/Users/wangshihao/projects/openclaws/appointment-manager/.git
-/Users/wangshihao/projects/openclaws/awesome-ai-ideas/.git
-/Users/wangshihao/projects/openclaws/career-soft-skills-coach/.git
-/Users/wangshihao/projects/openclaws/code-knowledge-map-generator/.git
-/Users/wangshihao/projects/openclaws/error-diagnostician/.git
-/Users/wangshihao/projects/openclaws/romance-of-three-claws/.git
+4ed95cd docs: update tech research 2026-06-14
 ```
 
-## 4. 抽样仓库检查（2 个真实仓库）
+Uncommitted changes before this report was created:
 
-### ai-appointment-manager
-- 路径：`/Users/wangshihao/projects/openclaws/ai-appointment-manager`
-- 最新提交：`8aec7d3 feat: small improvement`
-- 未提交改动：
 ```text
-（无未提交改动）
+(none)
 ```
 
-### ai-carbon-footprint-tracker
-- 路径：`/Users/wangshihao/projects/openclaws/ai-carbon-footprint-tracker`
-- 最新提交：`d04c1fc docs: cicd check`
-- 未提交改动：
+### `/Users/wangshihao/projects/openclaws/ai-appointment-manager`
+
+Latest commit:
+
 ```text
- M src/controllers/carbonController.ts
-?? docs/API.md
+8aec7d3 feat: small improvement
 ```
 
-## 5. 仓库异常
+Uncommitted changes:
 
-- 无
+```text
+(none)
+```
 
-## 6. 结论
+## Idea-to-Repository Mapping Assessment
 
-- 当前 idea-tracker.json 中 4 个想法均为 `high-value`。
-- 4 个想法均未提供显式仓库映射，属于“想法无仓库映射”，不是仓库异常。
-- 抽查的真实仓库中：`ai-appointment-manager` 工作区干净；`ai-carbon-footprint-tracker` 存在未提交改动。
+### Ideas with no repository mapping
+
+The tracker entries contain idea metadata and source file names, but no explicit repository path field. None of the four idea keys exactly matches any discovered repository basename from the required `find` command. Therefore these are classified as **idea has no repository mapping**, not repository errors:
+
+- `logi-chain-ai` / LogiChain AI
+- `gigflex-ai` / GigFlex AI
+- `mindscape-ai` / MindScape AI
+- `buildsafe-ai` / BuildSafe AI
+
+### Repository anomalies
+
+No repository anomaly was observed in the two sampled repositories:
+
+- `awesome-ai-ideas`: `git log` succeeded; status was clean before report creation.
+- `ai-appointment-manager`: `git log` succeeded; status was clean.
+
+## Blockers / Follow-up
+
+- Primary blocker: the tracker has no explicit mapping from high-value ideas to implementation repositories.
+- Recommended follow-up: add a `repoPath` or `repo` field to each `ideas` entry once an implementation repository exists, instead of inferring directories from idea names.
+
+## Commit Policy
+
+This run should commit only this progress report inside `awesome-ai-ideas` and must not push.
