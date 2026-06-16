@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "lastSync": "2026-04-23T09:01:00Z",
   "lastReview": "2026-04-02T02:30:00Z",
-  "lastEvaluation": "2026-06-15T02:30:00Z",
+  "lastEvaluation": "2026-06-16T02:30:00Z",
   "evaluationCriteria": {
     "technicalFeasibility": "技术实现难度和可行性 (1-10)",
     "marketDemand": "市场需求强度 (1-10)",
@@ -1522,6 +1522,44 @@
         "evaluator": "OpenClaw",
         "criteria": "Quick evaluation: feasibility/demand/innovation only",
         "notes": "可行性/需求/创新=7/9/7，平均7.67，标记 high-value；需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
+      }
+    },
+    "for-construction-workers-project-managers-buildsafe-ai---from-site-hazards-and-project-delays-to-ai": {
+      "name": "BuildSafe AI",
+      "file": "ideas/issue-1357--for-Construction-Workers-Project-Managers-BuildSafe-AI---From-site-hazards-and-project-delays-to-AI-powered-real-time-safety-monitoring-and-construction-optimization-ecosystem.md",
+      "status": "high-value",
+      "category": "Construction Safety & Project Management",
+      "scores": {
+        "technicalFeasibility": 7,
+        "marketDemand": 8,
+        "innovation": 7
+      },
+      "totalScore": 7.33,
+      "summary": "AI实时工地安全监测与施工优化；需求明确但落地依赖现场摄像头/IoT集成与安全责任合规。",
+      "evaluationDate": "2026-06-16T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "高危行业安全与延期成本痛点强，MVP可从视觉隐患检测+进度预警切入。"
+      }
+    },
+    "for-general-population-18-65-mindscape-ai---from-digital-age-mental-health-crisis-to-comprehensive-ai": {
+      "name": "MindScape AI",
+      "file": "ideas/issue-1356--for-General-Population-18-65-MindScape-AI---From-digital-age-mental-health-crisis-to-comprehensive-AI-powered-personal-wellness-ecosystem.md",
+      "status": "high-value",
+      "category": "Mental Health & Personal Wellness",
+      "scores": {
+        "technicalFeasibility": 6,
+        "marketDemand": 9,
+        "innovation": 6
+      },
+      "totalScore": 7.0,
+      "summary": "AI个人心理健康与身心健康生态；大众需求强，但医疗边界、危机干预和隐私合规增加难度。",
+      "evaluationDate": "2026-06-16T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "适合先做非医疗化压力管理/习惯陪伴，避免诊疗承诺。"
       }
     }
   },
