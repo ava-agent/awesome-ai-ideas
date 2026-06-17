@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "lastSync": "2026-04-23T09:01:00Z",
   "lastReview": "2026-04-02T02:30:00Z",
-  "lastEvaluation": "2026-06-16T02:30:00Z",
+  "lastEvaluation": "2026-06-17T02:30:00Z",
   "evaluationCriteria": {
     "technicalFeasibility": "技术实现难度和可行性 (1-10)",
     "marketDemand": "市场需求强度 (1-10)",
@@ -1560,6 +1560,25 @@
         "evaluator": "孔明",
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
         "notes": "适合先做非医疗化压力管理/习惯陪伴，避免诊疗承诺。"
+      }
+    },
+    "for-incarcerated-individuals-reentry-professionals-secondchance-ai---from-systemic-barriers-to-successful-reintegration": {
+      "name": "SecondChance AI",
+      "file": "ideas/issue-1349--for-Incarcerated-Individuals-Reentry-Professionals-SecondChance-AI---From-systemic-barriers-to-successful-reintegration-with-AI-powered-rehabilitation-and-employment-ecosystem.md",
+      "status": "high-value",
+      "category": "Social Reintegration & Employment",
+      "scores": {
+        "technicalFeasibility": 7,
+        "marketDemand": 8,
+        "innovation": 9
+      },
+      "totalScore": 8.0,
+      "summary": "为刑满释放人员和重返社会专业人士提供AI支持的康复和就业生态系统，社会价值重大，细分蓝海市场。",
+      "evaluationDate": "2026-06-17T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "社会痛点精准，差异化极强，政府/NGO合作空间大，但用户获取和数据采集存在挑战。"
       }
     }
   },
