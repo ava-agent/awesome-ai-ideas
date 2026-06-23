@@ -134,7 +134,7 @@ idea_backlog() {
     find ideas -maxdepth 1 -type f -name '*.md' -print0 2>/dev/null \
       | xargs -0 ls -t 2>/dev/null \
       | head -10 \
-      | sed 's#^#- #'
+      | sed 's#^#- #' || true
     echo
     echo "## Largest Proposal Files"
     echo
@@ -142,7 +142,7 @@ idea_backlog() {
       | xargs -0 wc -l 2>/dev/null \
       | sort -nr \
       | head -10 \
-      | sed 's/^/- /'
+      | sed 's/^/- /' || true
   } > "$file"
   commit_file "$file" "docs: idea backlog index $stamp"
 }
