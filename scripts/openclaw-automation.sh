@@ -178,6 +178,48 @@ quality_snapshot() {
   commit_file "$file" "docs: project quality snapshot $stamp"
 }
 
+weekly_review() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs
+  local week file
+  week="$(date '+%Y-W%V')"
+  file="docs/weekly-review-$week.md"
+  {
+    write_header "Weekly Review $week"
+    echo "## Recent Daily Summaries"
+    echo
+    find docs -maxdepth 1 -type f -name 'daily-summary-*.md' -print0 2>/dev/null \
+      | xargs -0 ls -t 2>/dev/null \
+      | head -5 \
+      | while read -r f; do
+          echo "- $(basename "$f")"
+          sed -n '1,8p' "$f" | sed 's/^/  /'
+        done || true
+    echo
+    echo "## Recent Automation Signals"
+    echo
+    find docs/automation -maxdepth 1 -type f -name '*.md' -print0 2>/dev/null \
+      | xargs -0 ls -t 2>/dev/null \
+      | head -8 \
+      | sed 's#^#- #' || true
+    echo
+    echo "## Repository Snapshot"
+    echo
+    echo "- Latest commit: $(git log -1 --oneline)"
+    echo "- Automation reports: $(find docs/automation -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+    echo "- Idea files: $(find ideas -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+    echo
+    echo "## Next Focus"
+    echo
+    echo "- Keep commits attributed to kevinten10."
+    echo "- Continue frequent small operational snapshots."
+    echo "- Investigate dirty downstream project repositories before enabling automated code changes."
+  } > "$file"
+  commit_file "$file" "docs: weekly review $week"
+}
+
 safe_sync() {
   ensure_repo
   ensure_identity
@@ -208,9 +250,10 @@ case "${1:-}" in
   pr-snapshot) pr_snapshot ;;
   idea-backlog) idea_backlog ;;
   quality-snapshot) quality_snapshot ;;
+  weekly-review) weekly_review ;;
   safe-sync) safe_sync ;;
   *)
-    echo "Usage: $0 {repo-pulse|pr-snapshot|idea-backlog|quality-snapshot|safe-sync}" >&2
+    echo "Usage: $0 {repo-pulse|pr-snapshot|idea-backlog|quality-snapshot|weekly-review|safe-sync}" >&2
     exit 2
     ;;
 esac
