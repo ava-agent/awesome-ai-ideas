@@ -26,8 +26,8 @@ This repository is a product lab for AI-native startup and agent ideas. It is de
 | --- | ---: |
 | Idea files | 3 |
 | Proposal drafts | 9 |
-| Documentation files | 101 |
-| Automation reports | 5 |
+| Documentation files | 104 |
+| Automation reports | 8 |
 | Open pull requests | 2 |
 
 Last refreshed: 2026-06-23.
