@@ -113,6 +113,119 @@ pr_snapshot() {
   commit_file "$file" "docs: GitHub PR snapshot $stamp"
 }
 
+pr_review_queue() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs/automation
+  local stamp file
+  stamp="$(slot)"
+  file="docs/automation/pr-review-queue-$stamp.md"
+  {
+    write_header "PR Review Queue $stamp"
+    echo "## Open PR Review Queue"
+    echo
+    if command -v gh >/dev/null 2>&1; then
+      gh api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=20' \
+        --jq '.[] | "- #\(.number) \(.title) | author=\(.user.login) | draft=\(.draft) | updated=\(.updated_at) | \(.html_url)"' || true
+      echo
+      echo "## Per-PR Diff Summary"
+      echo
+      gh api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=10' --jq '.[].number' 2>/dev/null \
+        | while read -r pr; do
+            [[ -z "$pr" ]] && continue
+            echo "### PR #$pr"
+            gh pr diff "$pr" --repo ava-agent/awesome-ai-ideas --stat 2>/dev/null || echo "diff unavailable"
+            echo
+          done || true
+    else
+      echo "gh is not installed."
+    fi
+  } > "$file"
+  commit_file "$file" "docs: PR review queue $stamp"
+}
+
+pr_ci_triage() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs/automation
+  local stamp file
+  stamp="$(slot)"
+  file="docs/automation/pr-ci-triage-$stamp.md"
+  {
+    write_header "PR CI Triage $stamp"
+    echo "## Open PR Merge State"
+    echo
+    if command -v gh >/dev/null 2>&1; then
+      gh api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=20' \
+        --jq '.[] | [.number, .title, .mergeable, .mergeable_state, .draft, .head.sha] | @tsv' 2>/dev/null \
+        | while IFS="$(printf '\t')" read -r number title mergeable merge_state draft sha; do
+            echo "### PR #$number"
+            echo
+            echo "- Title: $title"
+            echo "- Draft: $draft"
+            echo "- Mergeable: $mergeable"
+            echo "- Merge state: $merge_state"
+            echo "- Head SHA: $sha"
+            echo
+            echo "Checks:"
+            gh api "repos/ava-agent/awesome-ai-ideas/commits/$sha/check-runs" \
+              --jq '.check_runs[]? | "- \(.name): \(.status)/\(.conclusion)"' 2>/dev/null || echo "- check runs unavailable"
+            echo
+            echo "Statuses:"
+            gh api "repos/ava-agent/awesome-ai-ideas/commits/$sha/status" \
+              --jq '"- combined: \(.state)"' 2>/dev/null || echo "- combined status unavailable"
+            echo
+          done || true
+    else
+      echo "gh is not installed."
+    fi
+  } > "$file"
+  commit_file "$file" "docs: PR CI triage $stamp"
+}
+
+collaboration_snapshot() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs/automation
+  local stamp file
+  stamp="$(slot)"
+  file="docs/automation/three-claws-collaboration-$stamp.md"
+  {
+    write_header "Three-Claws Collaboration Snapshot $stamp"
+    echo "## Roles"
+    echo
+    echo "- 孔明/main: coordination, acceptance, final external actions."
+    echo "- 卧龙/github: read-only GitHub review, PR/issue risk analysis."
+    echo "- 凤雏/coding-agent: implementation proposals, local verification, no push."
+    echo
+    echo "## Current PR Queue"
+    echo
+    if command -v gh >/dev/null 2>&1; then
+      gh api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=10' \
+        --jq '.[] | "- #\(.number) \(.title) | \(.html_url)"' || true
+    else
+      echo "gh is not installed."
+    fi
+    echo
+    echo "## Recent Automation Evidence"
+    echo
+    find docs/automation -maxdepth 1 -type f -name '*.md' -print0 2>/dev/null \
+      | xargs -0 ls -t 2>/dev/null \
+      | head -12 \
+      | sed 's#^#- #' || true
+    echo
+    echo "## Operating Rules"
+    echo
+    echo "- Do not auto-merge PRs."
+    echo "- Review reports are evidence for humans and agents, not approvals."
+    echo "- All commits must remain attributed to kevinten <596823919@qq.com>."
+  } > "$file"
+  commit_file "$file" "docs: three-claws collaboration snapshot $stamp"
+}
+
 idea_backlog() {
   ensure_repo
   ensure_identity
@@ -220,6 +333,99 @@ weekly_review() {
   commit_file "$file" "docs: weekly review $week"
 }
 
+readme_refresh() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  local idea_count pr_count doc_count automation_count open_pr_count refresh_date
+  idea_count="$(find ideas -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+  pr_count="$(find prs -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+  doc_count="$(find docs -type f 2>/dev/null | wc -l | tr -d ' ')"
+  automation_count="$(find docs/automation -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
+  open_pr_count="$(gh api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=100' --jq 'length' 2>/dev/null || echo 'unknown')"
+  refresh_date="$(date '+%Y-%m-%d')"
+
+  cat > README.md <<README
+# Awesome AI Ideas
+
+<div align="center">
+
+**AI product ideas that are ready to evaluate, build, and ship.**
+
+[![Ideas](https://img.shields.io/badge/ideas-$idea_count-2f6f6f)](ideas/)
+[![Proposal Drafts](https://img.shields.io/badge/proposals-$pr_count-0f766e)](prs/)
+[![Automation](https://img.shields.io/badge/automation-active-2563eb)](docs/automation/)
+[![Maintained](https://img.shields.io/badge/maintained-by%20OpenClaw-111827)](scripts/openclaw-automation.sh)
+
+</div>
+
+This repository is a product lab for AI-native startup and agent ideas. It is designed for builders, investors, researchers, and operators who want more than a prompt list: each proposal aims to connect a real audience, a painful workflow, a product surface, and an execution path.
+
+## Why Follow This Repository
+
+- Discover AI product directions with clear users, scenarios, and market framing.
+- Reuse proposal drafts as starting points for prototypes, pitch decks, specs, or research.
+- Track automated repository health, PR review queues, and collaboration snapshots.
+- Watch the idea library evolve through scheduled OpenClaw maintenance.
+
+## Current Snapshot
+
+| Area | Count |
+| --- | ---: |
+| Idea files | $idea_count |
+| Proposal drafts | $pr_count |
+| Documentation files | $doc_count |
+| Automation reports | $automation_count |
+| Open pull requests | $open_pr_count |
+
+Last refreshed: $refresh_date.
+
+## Featured Ideas
+
+| Idea | Audience | Why It Matters |
+| --- | --- | --- |
+| [MedVision AI](prs/1343-medvision-ai.md) | Radiology teams and diagnostic clinics | Precision diagnostic workflows need faster triage, better second reads, and clearer clinical confidence signals. |
+| [DriveWise AI](prs/1409-DriveWise-AI.md) | Drivers, fleets, and mobility operators | Safer driving can become a real-time coaching and risk intelligence product instead of a post-incident report. |
+| [LegalCompass AI](prs/1200-legalcompass-ai.md) | Small businesses and individuals | Legal access remains expensive and fragmented; AI can guide compliance, document review, and next actions. |
+| [FoodWise AI](prs/1172-foodwise-ai.md) | Grocers, restaurants, food banks | Food waste is an operational and social problem that benefits from forecasting, routing, and demand matching. |
+| [RuralMed AI](prs/1263-ruralmed-ai.md) | Rural clinics and patients | Rural healthcare needs practical AI support for triage, access, follow-up, and specialist scarcity. |
+| [TerraCulture AI](prs/1124-terraculture-ai.md) | Indigenous communities and cultural stewards | Heritage preservation needs tools that respect community control while making knowledge easier to protect and teach. |
+
+## Explore
+
+- [Newest issue-driven ideas](ideas/)
+- [Proposal-ready drafts](prs/)
+- [Expanded proposal branches](p/)
+- [Automation and operations reports](docs/automation/)
+- [Roadmap](docs/roadmap.md)
+- [Latest weekly review](docs/weekly-review-2026-W26.md)
+
+## For Builders
+
+Use each proposal as a launchpad:
+
+1. Pick a user group with urgent pain.
+2. Validate the workflow and existing alternatives.
+3. Turn the proposal into a prototype or agent workflow.
+4. Open an issue or PR with evidence, scope, and next steps.
+
+Good contributions make ideas more concrete: sharper user segments, clearer workflows, better GTM assumptions, stronger technical architecture, or updated competitive research.
+
+## Maintenance Promise
+
+OpenClaw automation keeps this repository from drifting:
+
+- README refresh runs on a schedule so the public landing page is not lost again.
+- PR review and CI triage snapshots track open collaboration work.
+- Three-claws collaboration snapshots preserve coordination context.
+- Local hooks enforce the \`kevinten <596823919@qq.com>\` commit identity before commits and pushes.
+
+If the README disappears or gets stale, the scheduled maintenance task can regenerate it from the current repository state.
+README
+
+  commit_file README.md "docs: refresh README"
+}
+
 safe_sync() {
   ensure_repo
   ensure_identity
@@ -248,12 +454,16 @@ safe_sync() {
 case "${1:-}" in
   repo-pulse) repo_pulse ;;
   pr-snapshot) pr_snapshot ;;
+  pr-review-queue) pr_review_queue ;;
+  pr-ci-triage) pr_ci_triage ;;
+  collaboration-snapshot) collaboration_snapshot ;;
   idea-backlog) idea_backlog ;;
   quality-snapshot) quality_snapshot ;;
   weekly-review) weekly_review ;;
+  readme-refresh) readme_refresh ;;
   safe-sync) safe_sync ;;
   *)
-    echo "Usage: $0 {repo-pulse|pr-snapshot|idea-backlog|quality-snapshot|weekly-review|safe-sync}" >&2
+    echo "Usage: $0 {repo-pulse|pr-snapshot|pr-review-queue|pr-ci-triage|collaboration-snapshot|idea-backlog|quality-snapshot|weekly-review|readme-refresh|safe-sync}" >&2
     exit 2
     ;;
 esac
