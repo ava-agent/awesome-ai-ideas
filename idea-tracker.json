@@ -1621,8 +1621,8 @@
     }
   },
   "stats": {
-    "total": 63,
-    "highValue": 15,
+    "total": 65,
+    "highValue": 17,
     "inProgress": 1,
     "completed": 12,
     "new": 13,
@@ -1631,7 +1631,7 @@
     "averageScore": 7.7,
     "lastDevelopmentUpdate": "2026-04-02T10:30:00Z",
     "lastSync": "2026-04-03T01:00:00Z",
-    "lastEvaluation": "2026-06-14T02:01:00Z",
+    "lastEvaluation": "2026-06-23T02:30:00Z",
     "developmentProgress": {
       "ai-career-soft-skills-coach": {
         "phase": "Production Ready",
@@ -2548,6 +2548,46 @@
           "Carbon offset integration",
           "Advanced reporting features"
         ]
+      }
+    },
+    "for-incarcerated-individuals-reentry-professionals-secondchance-ai---from-systemic-barriers-to-successful-reintegration": {
+      "name": "SecondChance AI",
+      "file": "ideas/issue-1349--for-Incarcerated-Individuals-Reentry-Professionals-SecondChance-AI---From-systemic-barriers-to-successful-reintegration-with-AI-powered-rehabilitation-and-employment-ecosystem.md",
+      "status": "high-value",
+      "category": "Social Reintegration & Employment",
+      "scores": {
+        "technicalFeasibility": 7,
+        "marketDemand": 8,
+        "innovation": 9
+      },
+      "totalScore": 8.0,
+      "summary": "为刑满释放人员和重返社会专业人士提供AI支持的康复和就业生态系统，社会价值重大，细分蓝海市场。",
+      "priority": null,
+      "evaluationDate": "2026-06-23T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "可行性/需求/创新=7/8/9，平均8.0>=7，标记high-value；社会痛点精准，差异化极强，政府/NGO合作空间大，但用户获取和数据采集存在挑战。"
+      }
+    },
+    "for-construction-workers-project-managers-buildsafe-ai---from-site-hazards-and-project-delays-to-ai": {
+      "name": "BuildSafe AI",
+      "file": "ideas/issue-1357--for-Construction-Workers-Project-Managers-BuildSafe-AI---From-site-hazards-and-project-delays-to-AI-powered-real-time-safety-monitoring-and-construction-optimization-ecosystem.md",
+      "status": "high-value",
+      "category": "Construction Safety & Project Management",
+      "scores": {
+        "technicalFeasibility": 7,
+        "marketDemand": 9,
+        "innovation": 7
+      },
+      "totalScore": 7.67,
+      "summary": "AI实时工地安全监测与施工优化；高危行业安全痛点极强，刚需明确。",
+      "priority": null,
+      "evaluationDate": "2026-06-23T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "可行性/需求/创新=7/9/7，平均7.67>=7，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
       }
     }
   }
