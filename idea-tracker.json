@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "lastSync": "2026-04-23T09:01:00Z",
   "lastReview": "2026-04-02T02:30:00Z",
-  "lastEvaluation": "2026-06-24T02:30:00Z",
+  "lastEvaluation": "2026-06-25T02:30:00Z",
   "evaluationCriteria": {
     "technicalFeasibility": "技术实现难度和可行性 (1-10)",
     "marketDemand": "市场需求强度 (1-10)",
@@ -1600,6 +1600,25 @@
         "notes": "可行性/需求/创新=7/10/6，平均7.67>=7，标记high-value；需求极强竞争激烈，需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
       }
     },
+    "for-general-population-18-65-mindscape-ai---from-digital-age-mental-health-crisis-to-comprehensive-ai": {
+      "name": "MindScape AI",
+      "file": "ideas/issue-1356--for-General-Population-18-65-MindScape-AI---From-digital-age-mental-health-crisis-to-comprehensive-AI-powered-personal-wellness-ecosystem.md",
+      "status": "high-value",
+      "category": "Mental Health & Personal Wellness",
+      "scores": {
+        "technicalFeasibility": 7,
+        "marketDemand": 10,
+        "innovation": 6
+      },
+      "totalScore": 7.67,
+      "summary": "面向18-65岁大众的AI个人心理健康管理生态，需求爆发，市场巨大。",
+      "evaluationDate": "2026-06-25T02:30:00Z",
+      "evaluation": {
+        "evaluator": "孔明",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "可行性/需求/创新=7/10/6，平均7.67>=7，标记high-value；需求极强竞争激烈，需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
+      }
+    },
     "for-construction-workers-project-managers-buildsafe-ai---from-site-hazards-and-project-delays-to-ai": {
       "name": "BuildSafe AI",
       "file": "ideas/issue-1357--for-Construction-Workers-Project-Managers-BuildSafe-AI---From-site-hazards-and-project-delays-to-AI-powered-real-time-safety-monitoring-and-construction-optimization-ecosystem.md",
@@ -1612,7 +1631,7 @@
       },
       "totalScore": 7.67,
       "summary": "AI实时工地安全监测与施工优化；高危行业安全痛点极强，刚需明确。",
-      "evaluationDate": "2026-06-22T02:30:00Z",
+      "evaluationDate": "2026-06-25T02:30:00Z",
       "evaluation": {
         "evaluator": "孔明",
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
@@ -1621,17 +1640,17 @@
     }
   },
   "stats": {
-    "total": 65,
-    "highValue": 17,
+    "total": 67,
+    "highValue": 19,
     "inProgress": 1,
     "completed": 12,
-    "new": 13,
+    "new": 11,
     "mediumValue": 3,
     "skipped": 19,
     "averageScore": 7.7,
     "lastDevelopmentUpdate": "2026-04-02T10:30:00Z",
     "lastSync": "2026-04-03T01:00:00Z",
-    "lastEvaluation": "2026-06-23T02:30:00Z",
+    "lastEvaluation": "2026-06-25T02:30:00Z",
     "developmentProgress": {
       "ai-career-soft-skills-coach": {
         "phase": "Production Ready",
