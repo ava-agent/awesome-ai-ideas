@@ -55,15 +55,15 @@ gh_cmd() {
 }
 
 openclaw_cmd() {
-  if command -v openclaw >/dev/null 2>&1; then
-    openclaw "$@"
-    return
-  fi
-
   if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
     # shellcheck disable=SC1090
     . "$HOME/.nvm/nvm.sh"
     nvm use 22 >/dev/null 2>&1 || true
+  fi
+
+  if command -v openclaw >/dev/null 2>&1; then
+    openclaw "$@"
+    return
   fi
 
   openclaw "$@"
