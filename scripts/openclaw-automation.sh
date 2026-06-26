@@ -672,7 +672,7 @@ safe_sync() {
   ensure_repo
   ensure_identity
   export GIT_TERMINAL_PROMPT=0
-  git fetch --quiet origin
+  git -c http.version=HTTP/1.1 fetch --quiet origin
   if [[ -n "$(git status --porcelain)" ]]; then
     echo "SKIP: working tree is dirty"
     git status --short
@@ -689,7 +689,7 @@ safe_sync() {
     echo "Already synced with GitHub"
     exit 0
   fi
-  git push origin HEAD:main
+  git -c http.version=HTTP/1.1 push origin HEAD:main
   echo "Pushed $ahead commit(s) to GitHub as $GIT_NAME <$GIT_EMAIL>"
 }
 
