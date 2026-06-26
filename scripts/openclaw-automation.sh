@@ -54,6 +54,21 @@ gh_cmd() {
   gh "$@"
 }
 
+openclaw_cmd() {
+  if command -v openclaw >/dev/null 2>&1; then
+    openclaw "$@"
+    return
+  fi
+
+  if [[ -s "$HOME/.nvm/nvm.sh" ]]; then
+    # shellcheck disable=SC1090
+    . "$HOME/.nvm/nvm.sh"
+    nvm use 22 >/dev/null 2>&1 || true
+  fi
+
+  openclaw "$@"
+}
+
 git_with_timeout() {
   if command -v timeout >/dev/null 2>&1; then
     timeout "$GIT_REPO_TIMEOUT_SECONDS" git "$@"
@@ -308,8 +323,15 @@ collaboration_snapshot() {
     echo "## Current PR Queue"
     echo
     if gh_available; then
-      gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=10' \
-        --jq '.[] | "- #\(.number) \(.title) | \(.html_url)"' || true
+      pr_queue="$(
+        gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=10' \
+          --jq '.[] | "- #\(.number) \(.title) | \(.html_url)"' 2>/dev/null || true
+      )"
+      if [[ -n "$pr_queue" ]]; then
+        printf '%s\n' "$pr_queue"
+      else
+        echo "- PR query unavailable or no open PRs"
+      fi
     else
       echo "gh is not installed."
     fi
@@ -519,6 +541,99 @@ workspace_audit() {
 
   rm -f "$rows"
   commit_file "$file" "docs: workspace repository audit $stamp"
+}
+
+cron_audit() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs/automation
+  local stamp file json
+  stamp="$(slot)"
+  file="docs/automation/openclaw-cron-audit-$stamp.md"
+  json="$(mktemp)"
+
+  if ! command -v jq >/dev/null 2>&1; then
+    echo "SKIP: jq is required for cron audit"
+    rm -f "$json"
+    exit 0
+  fi
+
+  if ! openclaw_cmd cron list --json > "$json" 2>/dev/null; then
+    {
+      write_header "OpenClaw Cron Audit $stamp"
+      echo "## Status"
+      echo
+      echo "- openclaw cron list failed."
+    } > "$file"
+    rm -f "$json"
+    commit_file "$file" "docs: OpenClaw cron audit $stamp"
+  fi
+
+  {
+    write_header "OpenClaw Cron Audit $stamp"
+    echo "## Summary"
+    echo
+    jq -r '
+      .jobs as $jobs
+      | "- Total jobs: \($jobs | length)",
+        "- Enabled jobs: \($jobs | map(select(.enabled == true)) | length)",
+        "- Disabled jobs: \($jobs | map(select(.enabled != true)) | length)",
+        "- Status error: \($jobs | map(select(.status == "error")) | length)",
+        "- Last run error: \($jobs | map(select(.state.lastRunStatus == "error")) | length)",
+        "- Command jobs: \($jobs | map(select(.payload.kind == "command")) | length)",
+        "- Agent jobs: \($jobs | map(select(.payload.kind == "agentTurn")) | length)",
+        "- Jobs with stale SKIP summary: \($jobs | map(select((.state.lastDiagnosticSummary // "") | test("SKIP:|working tree is dirty|UU README"))) | length)"
+    ' "$json"
+    echo
+    echo "## Error Or Attention Jobs"
+    echo
+    jq -r '
+      .jobs[]
+      | select(.status == "error" or .state.lastRunStatus == "error" or ((.state.lastDiagnosticSummary // "") | test("SKIP:|working tree is dirty|UU README")))
+      | "- \(.name): status=\(.status) last=\(.state.lastRunStatus // "none") errors=\(.state.consecutiveErrors // 0) summary=\(((.state.lastDiagnosticSummary // "") | gsub("\n"; " ") | .[0:180]))"
+    ' "$json"
+    echo
+    echo "## Command Payload Duplicates"
+    echo
+    jq -r '
+      [.jobs[] | select(.payload.kind == "command") | {name, cmd: (.payload.argv // [] | join(" "))}]
+      | group_by(.cmd)[]
+      | select(length > 1)
+      | "- " + (.[0].cmd) + " => " + (map(.name) | join(" | "))
+    ' "$json"
+    echo
+    echo "## Schedule Matrix"
+    echo
+    echo "| Job | Enabled | Status | Kind | Schedule | Next Run Ms | Last Run |"
+    echo "| --- | --- | --- | --- | --- | ---: | --- |"
+    jq -r '
+      .jobs[]
+      | [
+          .name,
+          (.enabled | tostring),
+          .status,
+          .payload.kind,
+          (if .schedule.kind == "cron" then "cron " + .schedule.expr + " " + (.schedule.tz // "")
+           elif .schedule.kind == "every" then "every " + ((.schedule.everyMs // 0) | tostring) + "ms"
+           else (.schedule.kind // "unknown") end),
+          ((.state.nextRunAtMs // 0) | tostring),
+          (.state.lastRunStatus // "none")
+        ]
+      | @tsv
+    ' "$json" | while IFS="$(printf '\t')" read -r name enabled status kind schedule next_run last_run; do
+      printf '| %s | %s | %s | %s | %s | %s | %s |\n' "$name" "$enabled" "$status" "$kind" "$schedule" "$next_run" "$last_run"
+    done
+    echo
+    echo "## Operating Notes"
+    echo
+    echo "- Error jobs should be fixed or intentionally disabled."
+    echo "- Stale SKIP summaries are not current failures, but they hide the real latest state until the job runs again."
+    echo "- Command jobs are preferred for deterministic maintenance; agent jobs should stay narrow and file-scoped."
+  } > "$file"
+
+  rm -f "$json"
+  commit_file "$file" "docs: OpenClaw cron audit $stamp"
 }
 
 idea_evaluate() {
@@ -801,6 +916,7 @@ case "${1:-}" in
   pr-review-queue) pr_review_queue ;;
   pr-ci-triage) pr_ci_triage ;;
   collaboration-snapshot) collaboration_snapshot ;;
+  cron-audit) cron_audit ;;
   idea-backlog) idea_backlog ;;
   idea-evaluate) idea_evaluate ;;
   quality-snapshot) quality_snapshot ;;
@@ -809,7 +925,7 @@ case "${1:-}" in
   readme-refresh) readme_refresh ;;
   safe-sync) safe_sync ;;
   *)
-    echo "Usage: $0 {repo-pulse|pr-snapshot|pr-review-queue|pr-ci-triage|collaboration-snapshot|idea-backlog|idea-evaluate|quality-snapshot|workspace-audit|weekly-review|readme-refresh|safe-sync}" >&2
+    echo "Usage: $0 {repo-pulse|pr-snapshot|pr-review-queue|pr-ci-triage|collaboration-snapshot|cron-audit|idea-backlog|idea-evaluate|quality-snapshot|workspace-audit|weekly-review|readme-refresh|safe-sync}" >&2
     exit 2
     ;;
 esac

@@ -76,12 +76,22 @@ pr-snapshot
 pr-review-queue
 pr-ci-triage
 collaboration-snapshot
+cron-audit
 idea-backlog
+idea-evaluate
 quality-snapshot
+workspace-audit
 weekly-review
 readme-refresh
 safe-sync
 ```
+
+其中：
+
+- `workspace-audit` 只读扫描 `/Users/wangshihao/projects/openclaws` 或 `PROJECTS_DIR` 下的 Git 仓库，记录 dirty、ahead/behind、no-upstream 和最新提交作者。
+- `cron-audit` 只读扫描 OpenClaw cron 配置，记录错误任务、旧 SKIP 摘要、command/agent 分布和重复命令。
+- `idea-evaluate` 使用 `jq` 确定性更新 `idea-tracker.json`，避免大 JSON 文件由 agent 直接 edit 失败。
+- `safe-sync` 强制 GitHub HTTPS 使用 HTTP/1.1，避开 Git HTTP/2 framing layer 问题。
 
 安全行为：
 
