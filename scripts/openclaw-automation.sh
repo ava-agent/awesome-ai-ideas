@@ -419,6 +419,108 @@ quality_snapshot() {
   commit_file "$file" "docs: project quality snapshot $stamp"
 }
 
+workspace_audit() {
+  ensure_repo
+  ensure_identity
+  ensure_clean
+  mkdir -p docs/automation
+  local stamp file rows
+  stamp="$(slot)"
+  file="docs/automation/workspace-audit-$stamp.md"
+  rows="$(mktemp)"
+
+  if [[ -d "$PROJECTS_DIR" ]]; then
+    find "$PROJECTS_DIR" -mindepth 2 -maxdepth 2 -type d -name .git 2>/dev/null \
+      | sed 's#/.git$##' \
+      | sort \
+      | head -n "$QUALITY_MAX_REPOS" \
+      | while read -r repo; do
+          local name branch remote tracked_dirty untracked_dirty upstream counts behind ahead sync_state last_author last_email last_subject
+          name="$(basename "$repo")"
+          branch="$(git_with_timeout -C "$repo" branch --show-current 2>/dev/null || echo unknown)"
+          remote="$(git_with_timeout -C "$repo" remote get-url origin 2>/dev/null || echo none)"
+          tracked_dirty="$(
+            git_with_timeout -C "$repo" status --porcelain --untracked-files=no 2>/dev/null \
+              | sed '/^$/d' \
+              | wc -l \
+              | tr -d ' ' || echo unknown
+          )"
+          untracked_dirty="$(
+            git_with_timeout -C "$repo" status --porcelain --untracked-files=all 2>/dev/null \
+              | awk '/^\?\?/ {count++} END {print count+0}' || echo unknown
+          )"
+          upstream="$(git_with_timeout -C "$repo" rev-parse --abbrev-ref --symbolic-full-name '@{u}' 2>/dev/null || true)"
+          if [[ -z "$upstream" ]]; then
+            behind="?"
+            ahead="?"
+            sync_state="no-upstream"
+          else
+            counts="$(git_with_timeout -C "$repo" rev-list --left-right --count '@{u}...HEAD' 2>/dev/null || echo 'unknown unknown')"
+            behind="${counts%%[[:space:]]*}"
+            ahead="${counts##*[[:space:]]}"
+            if [[ "$behind" == "unknown" || "$ahead" == "unknown" ]]; then
+              sync_state="unknown"
+            elif [[ "$behind" -gt 0 && "$ahead" -gt 0 ]]; then
+              sync_state="diverged"
+            elif [[ "$behind" -gt 0 ]]; then
+              sync_state="behind"
+            elif [[ "$ahead" -gt 0 ]]; then
+              sync_state="ahead"
+            else
+              sync_state="synced"
+            fi
+          fi
+          last_author="$(git_with_timeout -C "$repo" log -1 --format='%an' 2>/dev/null | tr '\t|' '  ' || echo unknown)"
+          last_email="$(git_with_timeout -C "$repo" log -1 --format='%ae' 2>/dev/null | tr '\t|' '  ' || echo unknown)"
+          last_subject="$(git_with_timeout -C "$repo" log -1 --format='%s' 2>/dev/null | tr '\t|' '  ' || echo no-commits)"
+          printf '%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s\t%s <%s>\t%s\n' \
+            "$name" "$branch" "$sync_state" "$behind" "$ahead" "$tracked_dirty" "$untracked_dirty" "$remote" "$last_author" "$last_email" "$last_subject"
+        done > "$rows"
+  else
+    : > "$rows"
+  fi
+
+  {
+    write_header "Workspace Repository Audit $stamp"
+    echo "## Summary"
+    echo
+    echo "- Workspace: $PROJECTS_DIR"
+    echo "- Scan limit: $QUALITY_MAX_REPOS repositories"
+    echo "- Git command timeout: ${GIT_REPO_TIMEOUT_SECONDS}s per repository"
+    echo "- Repositories scanned: $(wc -l < "$rows" | tr -d ' ')"
+    echo "- Repositories with tracked changes: $(awk -F '\t' '$6 != "0" {count++} END {print count+0}' "$rows")"
+    echo "- Repositories with untracked files: $(awk -F '\t' '$7 != "0" {count++} END {print count+0}' "$rows")"
+    echo "- Repositories without upstream: $(awk -F '\t' '$3 == "no-upstream" {count++} END {print count+0}' "$rows")"
+    echo "- Repositories ahead of upstream: $(awk -F '\t' '$3 == "ahead" || $3 == "diverged" {count++} END {print count+0}' "$rows")"
+    echo "- Repositories behind upstream: $(awk -F '\t' '$3 == "behind" || $3 == "diverged" {count++} END {print count+0}' "$rows")"
+    echo
+    echo "## Attention Queue"
+    echo
+    awk -F '\t' '
+      $6 != "0" || $7 != "0" || $3 != "synced" {
+        printf "- %s: sync=%s behind=%s ahead=%s tracked_dirty=%s untracked=%s\n", $1, $3, $4, $5, $6, $7
+      }
+    ' "$rows"
+    echo
+    echo "## Repository Matrix"
+    echo
+    echo "| Repository | Branch | Sync | Behind | Ahead | Tracked Dirty | Untracked | Remote | Last Commit |"
+    echo "| --- | --- | --- | ---: | ---: | ---: | ---: | --- | --- |"
+    awk -F '\t' '{
+      printf "| %s | %s | %s | %s | %s | %s | %s | %s | %s - %s |\n", $1, $2, $3, $4, $5, $6, $7, $8, $9, $10
+    }' "$rows"
+    echo
+    echo "## Operating Notes"
+    echo
+    echo "- This audit is read-only for downstream repositories."
+    echo "- Dirty downstream repositories are not auto-committed because they may contain user work."
+    echo "- Repositories marked diverged or behind should be reviewed before enabling write automation."
+  } > "$file"
+
+  rm -f "$rows"
+  commit_file "$file" "docs: workspace repository audit $stamp"
+}
+
 idea_evaluate() {
   ensure_repo
   ensure_identity
@@ -702,11 +804,12 @@ case "${1:-}" in
   idea-backlog) idea_backlog ;;
   idea-evaluate) idea_evaluate ;;
   quality-snapshot) quality_snapshot ;;
+  workspace-audit) workspace_audit ;;
   weekly-review) weekly_review ;;
   readme-refresh) readme_refresh ;;
   safe-sync) safe_sync ;;
   *)
-    echo "Usage: $0 {repo-pulse|pr-snapshot|pr-review-queue|pr-ci-triage|collaboration-snapshot|idea-backlog|idea-evaluate|quality-snapshot|weekly-review|readme-refresh|safe-sync}" >&2
+    echo "Usage: $0 {repo-pulse|pr-snapshot|pr-review-queue|pr-ci-triage|collaboration-snapshot|idea-backlog|idea-evaluate|quality-snapshot|workspace-audit|weekly-review|readme-refresh|safe-sync}" >&2
     exit 2
     ;;
 esac
