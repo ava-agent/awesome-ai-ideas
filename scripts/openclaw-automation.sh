@@ -13,6 +13,15 @@ EXPECTED_REMOTE="${EXPECTED_REMOTE:-https://github.com/ava-agent/awesome-ai-idea
 GIT_NAME="${GIT_NAME:-kevinten}"
 GIT_EMAIL="${GIT_EMAIL:-596823919@qq.com}"
 GH_GCM_SCRIPT="${GH_GCM_SCRIPT:-$REPO_DIR/scripts/gh-gcm.ps1}"
+GIT_REPO_TIMEOUT_SECONDS="${GIT_REPO_TIMEOUT_SECONDS:-10}"
+QUALITY_MAX_REPOS="${QUALITY_MAX_REPOS:-80}"
+
+if ! [[ "$GIT_REPO_TIMEOUT_SECONDS" =~ ^[0-9]+$ ]] || [[ "$GIT_REPO_TIMEOUT_SECONDS" -lt 1 ]]; then
+  GIT_REPO_TIMEOUT_SECONDS=10
+fi
+if ! [[ "$QUALITY_MAX_REPOS" =~ ^[0-9]+$ ]] || [[ "$QUALITY_MAX_REPOS" -lt 1 ]]; then
+  QUALITY_MAX_REPOS=80
+fi
 
 cd "$REPO_DIR"
 
@@ -43,6 +52,15 @@ gh_cmd() {
   fi
 
   gh "$@"
+}
+
+git_with_timeout() {
+  if command -v timeout >/dev/null 2>&1; then
+    timeout "$GIT_REPO_TIMEOUT_SECONDS" git "$@"
+    return
+  fi
+
+  git "$@"
 }
 
 ensure_repo() {
@@ -195,24 +213,54 @@ pr_ci_triage() {
     echo "## Open PR Merge State"
     echo
     if gh_available; then
-      gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=20' \
-        --jq '.[] | [.number, .title, .mergeable, .mergeable_state, .draft, .head.sha] | @tsv' 2>/dev/null \
-        | while IFS="$(printf '\t')" read -r number title mergeable merge_state draft sha; do
+      pr_rows="$(
+        gh_cmd pr list --repo ava-agent/awesome-ai-ideas --state open --limit 20 \
+          --json number,title,isDraft,headRefOid,mergeStateStatus \
+          --jq '.[] | [.number, .title, .isDraft, .mergeStateStatus, .headRefOid] | @tsv' 2>/dev/null || true
+      )"
+      if [[ -z "$pr_rows" ]]; then
+        echo "- no open PRs found or PR query unavailable"
+      fi
+      printf '%s\n' "$pr_rows" \
+        | while IFS="$(printf '\t')" read -r number title draft merge_state sha; do
+            [[ -z "$number" ]] && continue
             echo "### PR #$number"
             echo
             echo "- Title: $title"
             echo "- Draft: $draft"
-            echo "- Mergeable: $mergeable"
             echo "- Merge state: $merge_state"
             echo "- Head SHA: $sha"
             echo
             echo "Checks:"
-            gh_cmd api "repos/ava-agent/awesome-ai-ideas/commits/$sha/check-runs" \
-              --jq '.check_runs[]? | "- \(.name): \(.status)/\(.conclusion)"' 2>/dev/null || echo "- check runs unavailable"
+            if [[ "$sha" =~ ^[0-9a-f]{40}$ ]]; then
+              checks="$(gh_cmd api "repos/ava-agent/awesome-ai-ideas/commits/$sha/check-runs" \
+                --jq '.check_runs[]? | [.name, .status, .conclusion] | @tsv' 2>/dev/null || true)"
+              if [[ -n "$checks" ]]; then
+                printf '%s\n' "$checks" \
+                  | while IFS="$(printf '\t')" read -r check_name check_status check_conclusion; do
+                      [[ -z "$check_name" ]] && continue
+                      [[ -n "$check_conclusion" ]] || check_conclusion="none"
+                      echo "- $check_name: $check_status/$check_conclusion"
+                    done
+              else
+                echo "- no check runs found or unavailable"
+              fi
+            else
+              echo "- skipped: missing head SHA"
+            fi
             echo
             echo "Statuses:"
-            gh_cmd api "repos/ava-agent/awesome-ai-ideas/commits/$sha/status" \
-              --jq '"- combined: \(.state)"' 2>/dev/null || echo "- combined status unavailable"
+            if [[ "$sha" =~ ^[0-9a-f]{40}$ ]]; then
+              statuses="$(gh_cmd api "repos/ava-agent/awesome-ai-ideas/commits/$sha/status" \
+                --jq '.state' 2>/dev/null || true)"
+              if [[ -n "$statuses" ]]; then
+                echo "- combined: $statuses"
+              else
+                echo "- combined status unavailable"
+              fi
+            else
+              echo "- skipped: missing head SHA"
+            fi
             echo
           done || true
     else
@@ -310,16 +358,36 @@ quality_snapshot() {
     echo "## Local Git Repositories"
     echo
     if [[ -d "$PROJECTS_DIR" ]]; then
-      find "$PROJECTS_DIR" -mindepth 2 -maxdepth 2 -type d -name .git \
+      local total_repos
+      total_repos="$(
+        find "$PROJECTS_DIR" -mindepth 2 -maxdepth 2 -type d -name .git 2>/dev/null \
+          | wc -l \
+          | tr -d ' '
+      )"
+      echo "- Repositories found: $total_repos"
+      echo "- Scan limit: $QUALITY_MAX_REPOS repositories"
+      echo "- Git command timeout: ${GIT_REPO_TIMEOUT_SECONDS}s per repository"
+      echo
+      find "$PROJECTS_DIR" -mindepth 2 -maxdepth 2 -type d -name .git 2>/dev/null \
         | sed 's#/.git$##' \
         | sort \
+        | head -n "$QUALITY_MAX_REPOS" \
         | while read -r repo; do
             name="$(basename "$repo")"
-            dirty="$(git -C "$repo" status --porcelain 2>/dev/null | wc -l | tr -d ' ')"
-            last="$(git -C "$repo" log -1 --oneline 2>/dev/null || echo 'no commits')"
+            if dirty_output="$(git_with_timeout -C "$repo" status --porcelain --untracked-files=no 2>/dev/null)"; then
+              dirty="$(printf '%s\n' "$dirty_output" | sed '/^$/d' | wc -l | tr -d ' ')"
+            else
+              dirty="timeout-or-error"
+            fi
+            if last_output="$(git_with_timeout -C "$repo" log -1 --oneline 2>/dev/null)"; then
+              [[ -n "$last_output" ]] || last_output="no commits"
+              last="$last_output"
+            else
+              last="timeout-or-error"
+            fi
             package="no"
             [[ -f "$repo/package.json" ]] && package="yes"
-            echo "- $name: dirty=$dirty package=$package last=$last"
+            echo "- $name: tracked_dirty=$dirty package=$package last=$last"
           done
     else
       echo "- PROJECTS_DIR not found: $PROJECTS_DIR"

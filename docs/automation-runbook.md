@@ -14,9 +14,16 @@
 ```powershell
 git config user.name kevinten
 git config user.email 596823919@qq.com
+git config core.longpaths true
 ```
 
 自动化提交时不要使用 `git add -A`，只暂存本次任务生成或修复的目标文件。
+
+如果需要在 Windows 上创建临时克隆或工作树，仓库内存在较长文件名，克隆时也应显式启用长路径：
+
+```powershell
+git -c core.longpaths=true clone https://github.com/ava-agent/awesome-ai-ideas.git D:\path\to\awesome-ai-ideas-smoke
+```
 
 ## GitHub CLI 访问
 
@@ -50,8 +57,16 @@ Windows 上不要直接运行 `bash scripts/openclaw-automation.sh`，因为 `ba
 ```powershell
 $env:REPO_DIR = 'D:/project/awesome-ai-ideas'
 $env:PROJECTS_DIR = 'D:/project'
+$env:QUALITY_MAX_REPOS = '80'
+$env:GIT_REPO_TIMEOUT_SECONDS = '10'
 & 'D:\git\Git\usr\bin\bash.exe' scripts/openclaw-automation.sh quality-snapshot
 ```
+
+`quality-snapshot` 会扫描 `PROJECTS_DIR` 下的本地 Git 仓库。为避免单个异常仓库拖住定时任务：
+
+- `QUALITY_MAX_REPOS` 控制最多扫描多少个仓库，默认 `80`。
+- `GIT_REPO_TIMEOUT_SECONDS` 控制每次 Git 查询的最长秒数，默认 `10`。
+- 脚本只统计已跟踪文件的变更数量，不把 `node_modules`、缓存目录等未跟踪文件计入 `tracked_dirty`。
 
 可用任务：
 
