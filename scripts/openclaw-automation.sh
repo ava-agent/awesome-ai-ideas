@@ -568,6 +568,7 @@ cron_audit() {
     } > "$file"
     rm -f "$json"
     commit_file "$file" "docs: OpenClaw cron audit $stamp"
+    return 0
   fi
 
   {
