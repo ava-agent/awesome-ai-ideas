@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "lastSync": "2026-04-23T09:01:00Z",
   "lastReview": "2026-04-02T02:30:00Z",
-  "lastEvaluation": "2026-06-25T02:30:00Z",
+  "lastEvaluation": "2026-06-26T14:58:42Z",
   "evaluationCriteria": {
     "technicalFeasibility": "技术实现难度和可行性 (1-10)",
     "marketDemand": "市场需求强度 (1-10)",
@@ -1536,11 +1536,11 @@
       },
       "totalScore": 7.67,
       "summary": "AI实时工地安全监测与施工优化；高危行业安全痛点极强，刚需明确。",
-      "evaluationDate": "2026-06-20T02:30:00Z",
+      "evaluationDate": "2026-06-25T02:30:00Z",
       "evaluation": {
         "evaluator": "孔明",
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
-        "notes": "可行性/需求/创新=7/9/7，平均7.67，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
+        "notes": "可行性/需求/创新=7/9/7，平均7.67>=7，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
       }
     },
     "for-general-population-18-65-mindscape-ai---from-digital-age-mental-health-crisis-to-comprehensive-ai": {
@@ -1554,12 +1554,12 @@
         "innovation": 6
       },
       "totalScore": 7.67,
-      "summary": "AI个人心理健康与身心健康生态；数字时代心理健康需求爆发，市场巨大。",
-      "evaluationDate": "2026-06-20T02:30:00Z",
+      "summary": "面向18-65岁大众的AI个人心理健康管理生态，需求爆发，市场巨大。",
+      "evaluationDate": "2026-06-25T02:30:00Z",
       "evaluation": {
         "evaluator": "孔明",
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
-        "notes": "可行性/需求/创新=7/10/6，平均7.67，标记high-value；大众心理健康需求极强，但竞争激烈，需避免医疗诊断承诺并强化隐私保护与危机转介机制。"
+        "notes": "可行性/需求/创新=7/10/6，平均7.67>=7，标记high-value；需求极强竞争激烈，需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
       }
     },
     "for-incarcerated-individuals-reentry-professionals-secondchance-ai---from-systemic-barriers-to-successful-reintegration": {
@@ -1580,63 +1580,6 @@
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
         "notes": "社会痛点精准，差异化极强，政府/NGO合作空间大，但用户获取和数据采集存在挑战。"
       }
-    },
-    "for-general-population-18-65-mindscape-ai---from-digital-age-mental-health-crisis-to-comprehensive-ai": {
-      "name": "MindScape AI",
-      "file": "ideas/issue-1356--for-General-Population-18-65-MindScape-AI---From-digital-age-mental-health-crisis-to-comprehensive-AI-powered-personal-wellness-ecosystem.md",
-      "status": "high-value",
-      "category": "Mental Health & Personal Wellness",
-      "scores": {
-        "technicalFeasibility": 7,
-        "marketDemand": 10,
-        "innovation": 6
-      },
-      "totalScore": 7.67,
-      "summary": "面向18-65岁大众的AI个人心理健康管理生态，需求爆发，市场巨大。",
-      "evaluationDate": "2026-06-22T02:30:00Z",
-      "evaluation": {
-        "evaluator": "孔明",
-        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
-        "notes": "可行性/需求/创新=7/10/6，平均7.67>=7，标记high-value；需求极强竞争激烈，需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
-      }
-    },
-    "for-general-population-18-65-mindscape-ai---from-digital-age-mental-health-crisis-to-comprehensive-ai": {
-      "name": "MindScape AI",
-      "file": "ideas/issue-1356--for-General-Population-18-65-MindScape-AI---From-digital-age-mental-health-crisis-to-comprehensive-AI-powered-personal-wellness-ecosystem.md",
-      "status": "high-value",
-      "category": "Mental Health & Personal Wellness",
-      "scores": {
-        "technicalFeasibility": 7,
-        "marketDemand": 10,
-        "innovation": 6
-      },
-      "totalScore": 7.67,
-      "summary": "面向18-65岁大众的AI个人心理健康管理生态，需求爆发，市场巨大。",
-      "evaluationDate": "2026-06-25T02:30:00Z",
-      "evaluation": {
-        "evaluator": "孔明",
-        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
-        "notes": "可行性/需求/创新=7/10/6，平均7.67>=7，标记high-value；需求极强竞争激烈，需避免医疗诊断承诺，强化隐私保护和危机转介机制。"
-      }
-    },
-    "for-construction-workers-project-managers-buildsafe-ai---from-site-hazards-and-project-delays-to-ai": {
-      "name": "BuildSafe AI",
-      "file": "ideas/issue-1357--for-Construction-Workers-Project-Managers-BuildSafe-AI---From-site-hazards-and-project-delays-to-AI-powered-real-time-safety-monitoring-and-construction-optimization-ecosystem.md",
-      "status": "high-value",
-      "category": "Construction Safety & Project Management",
-      "scores": {
-        "technicalFeasibility": 7,
-        "marketDemand": 9,
-        "innovation": 7
-      },
-      "totalScore": 7.67,
-      "summary": "AI实时工地安全监测与施工优化；高危行业安全痛点极强，刚需明确。",
-      "evaluationDate": "2026-06-25T02:30:00Z",
-      "evaluation": {
-        "evaluator": "孔明",
-        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
-        "notes": "可行性/需求/创新=7/9/7，平均7.67>=7，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
-      }
     }
   },
   "stats": {
@@ -1650,7 +1593,7 @@
     "averageScore": 7.7,
     "lastDevelopmentUpdate": "2026-04-02T10:30:00Z",
     "lastSync": "2026-04-03T01:00:00Z",
-    "lastEvaluation": "2026-06-25T02:30:00Z",
+    "lastEvaluation": "2026-06-26T14:58:42Z",
     "developmentProgress": {
       "ai-career-soft-skills-coach": {
         "phase": "Production Ready",
@@ -2608,6 +2551,34 @@
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
         "notes": "可行性/需求/创新=7/9/7，平均7.67>=7，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
       }
+    }
+  },
+  "automation": {
+    "ideaEvaluation": {
+      "generatedAt": "2026-06-26T14:58:42Z",
+      "method": "deterministic shell evaluation for the two newest ideas files",
+      "latestIdeas": [
+        {
+          "file": "ideas/issue-1357--for-Construction-Workers-Project-Managers-BuildSafe-AI---From-site-hazards-and-project-delays-to-AI-powered-real-time-safety-monitoring-and-construction-optimization-ecosystem.md",
+          "scores": {
+            "technicalFeasibility": 8,
+            "marketDemand": 8,
+            "innovation": 8
+          },
+          "averageScore": 8,
+          "label": "high-value"
+        },
+        {
+          "file": "ideas/issue-1356--for-General-Population-18-65-MindScape-AI---From-digital-age-mental-health-crisis-to-comprehensive-AI-powered-personal-wellness-ecosystem.md",
+          "scores": {
+            "technicalFeasibility": 8,
+            "marketDemand": 8,
+            "innovation": 8
+          },
+          "averageScore": 8,
+          "label": "high-value"
+        }
+      ]
     }
   }
 }
