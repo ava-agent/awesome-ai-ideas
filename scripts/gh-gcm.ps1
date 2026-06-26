@@ -3,6 +3,8 @@ param(
   [string[]] $GhArgs
 )
 
+Set-StrictMode -Version 2.0
+
 if (-not $GhArgs -or $GhArgs.Count -eq 0) {
   Write-Error "Usage: powershell -File scripts/gh-gcm.ps1 <gh arguments>"
   exit 2
@@ -12,6 +14,14 @@ $oldGhToken = $env:GH_TOKEN
 $exitCode = 0
 
 try {
+  if (-not (Get-Command gh -ErrorAction SilentlyContinue)) {
+    throw "GitHub CLI 'gh' was not found in PATH."
+  }
+
+  if (-not (Get-Command git -ErrorAction SilentlyContinue)) {
+    throw "Git was not found in PATH."
+  }
+
   if ([string]::IsNullOrWhiteSpace($env:GH_TOKEN)) {
     $query = "protocol=https`nhost=github.com`n`n"
     $credential = $query | git credential fill
