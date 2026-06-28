@@ -6,28 +6,28 @@
 
 ## 本周结论
 
-本周仓库从常规快照进入“自动化产物需要降噪、统计口径需要校准”的阶段。README 已在 2026-06-26 刷新，自动化报告数、proposal 数和最新周报链接基本有效；但 GitHub open PR 数已过期，`idea-tracker.json` 存在重复 key/统计口径不一致，`docs/roadmap.md` 的 65 个想法与结构化解析结果无法直接对齐。
+本周仓库从常规快照进入“自动化产物需要降噪、统计口径需要校准”的阶段。README 已在本轮刷新并校准 open PR 数，自动化报告数、proposal 数和最新周报链接基本有效；剩余核心问题是 `idea-tracker.json` 存在重复 key/统计口径不一致，`docs/roadmap.md` 的 65 个想法与结构化解析结果无法直接对齐。
 
 路线图暂不建议自动改。当前优先顺序仍写作：AI职场软技能导师 -> AI简历诊断师 -> AI音乐创作伙伴 -> AI个人成长教练；但趋势扫描显示 Agent Security ReviewOps 和 Healthcare Admin Precision Copilot 是更值得进入下一轮候选评估的新方向，应先补成结构化 idea，再决定是否调整路线图。
 
 ## 本周新增或变化
 
-- README 当前快照日期为 2026-06-26，显示 65 个路线图想法、3 个 issue idea、9 个 proposal、70 个自动化报告、3 个 open PR。
+- README 当前快照日期为 2026-06-26，显示 65 个路线图想法、3 个 issue idea、9 个 proposal、70 个自动化报告、2 个 open PR。
 - 实测 `docs/automation/` 当前确有 70 个报告；`ideas/*.md` 为 3 个，`prs/*.md` 为 9 个，`p/*` 目录为 9 个。
-- GitHub 实时检查显示 open PR 只有 1 个：#1368 `ChainVision AI`；6 月 25 日自动化报告里的 #1420 已不再出现在 open PR 列表中，因此 README 的 open PR=3 已过期。
+- GitHub 实时检查显示 open PR 有 2 个：#1437 `MfgKnowledge AI` 文档 PR 与 #1368 `ChainVision AI`；6 月 25 日自动化报告里的 #1420 已不再出现在 open PR 列表中，因此 README 需要刷新到 open PR=2。
 - GitHub open issue 最新信号包含 #1434 “AI讨论：你还享受手动写代码的乐趣吗？”以及 #1426 `MfgKnowledge AI`，其中 #1426 已带 `quality:high`、`ai-agents`、`knowledge-graph`、`rag` 标签。
 - `trend-candidates-2026-06-26.md` 新增 5 个趋势候选，并明确推荐优先跟进 `Agent Security ReviewOps` 与 `Healthcare Admin Precision Copilot`。
 - 未发现名为 `idea-priority-review` 或 `idea-quality-gaps` 的报告文件；对应信号主要分散在 `idea-backlog-*`、`quality-snapshot-*`、`trend-candidates-*` 和 `idea-tracker.json`。
 
 ## README 状态
 
-README 没有整体过期，但局部统计已过期：
+README 整体可用，关键统计已在本轮校准：
 
 - 有效：最新周报链接、automation 报告数 70、issue idea 3、proposal 9 与本地文件系统一致。
-- 过期：GitHub open PR 写作 3，实时 `gh-gcm.ps1 pr list` 只返回 1 个。
+- 已校准：GitHub open PR 已刷新为 2，与实时 `gh-gcm.ps1 pr list` 一致。
 - 需核对：路线图追踪想法 65 与 `idea-tracker.json` 的结构化解析结果不一致。
 
-建议等下一次 `readme-refresh` 将 open PR 数更新为实时值；本轮不直接改 README，因为这是统计刷新问题，不是内容结构问题。
+本轮已将 README open PR 数更新为实时值；后续仍应通过 `readme-refresh` 自动保持统计一致。
 
 ## Tracker 与 Roadmap 一致性
 
@@ -66,11 +66,11 @@ README 没有整体过期，但局部统计已过期：
 
 ## 路线图是否需要更新
 
-暂不自动更新。需要更新的不是优先级文字本身，而是支撑它的统计证据：tracker 重复 key、AI Workspace Orchestrator 进展停留日期、README PR 数过期。等这些基础数据修正后，再决定是否把趋势候选纳入下一阶段优先顺序。
+暂不自动更新。需要更新的不是优先级文字本身，而是支撑它的统计证据：tracker 重复 key、AI Workspace Orchestrator 进展停留日期，以及 README/GitHub 统计需要持续自动校准。等这些基础数据修正后，再决定是否把趋势候选纳入下一阶段优先顺序。
 
 ## 下周检查点
 
-- README open PR 数是否从 3 修正为实时值。
+- README open PR 数是否继续与实时 GitHub PR 列表保持一致。
 - `idea-tracker.json` 是否完成重复 key 清理并能被标准 JSON parser 稳定解析。
 - #1426 `MfgKnowledge AI` 是否进入本地 idea/proposal 文档。
 - #1368 `ChainVision AI` 是否仍长期滞留 open 状态，是否需要关闭、更新或转为本地 proposal。

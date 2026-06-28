@@ -57,10 +57,16 @@ Windows 上不要直接运行 `bash scripts/openclaw-automation.sh`，因为 `ba
 ```powershell
 $env:REPO_DIR = 'D:/project/awesome-ai-ideas'
 $env:PROJECTS_DIR = 'D:/project'
+$env:GH_TIMEOUT_SECONDS = '45'
 $env:QUALITY_MAX_REPOS = '80'
 $env:GIT_REPO_TIMEOUT_SECONDS = '10'
 & 'D:\git\Git\usr\bin\bash.exe' scripts/openclaw-automation.sh quality-snapshot
 ```
+
+脚本中的 GitHub CLI 调用也有超时保护：
+
+- `GH_TIMEOUT_SECONDS` 控制每次 GitHub CLI 查询的最长秒数，默认 `45`。
+- GitHub 查询超时或不可用时，报告会写入 `unknown` 或不可用说明，而不是无限等待。
 
 `quality-snapshot` 会扫描 `PROJECTS_DIR` 下的本地 Git 仓库。为避免单个异常仓库拖住定时任务：
 

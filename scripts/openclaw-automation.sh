@@ -13,9 +13,13 @@ EXPECTED_REMOTE="${EXPECTED_REMOTE:-https://github.com/ava-agent/awesome-ai-idea
 GIT_NAME="${GIT_NAME:-kevinten}"
 GIT_EMAIL="${GIT_EMAIL:-596823919@qq.com}"
 GH_GCM_SCRIPT="${GH_GCM_SCRIPT:-$REPO_DIR/scripts/gh-gcm.ps1}"
+GH_TIMEOUT_SECONDS="${GH_TIMEOUT_SECONDS:-45}"
 GIT_REPO_TIMEOUT_SECONDS="${GIT_REPO_TIMEOUT_SECONDS:-10}"
 QUALITY_MAX_REPOS="${QUALITY_MAX_REPOS:-80}"
 
+if ! [[ "$GH_TIMEOUT_SECONDS" =~ ^[0-9]+$ ]] || [[ "$GH_TIMEOUT_SECONDS" -lt 1 ]]; then
+  GH_TIMEOUT_SECONDS=45
+fi
 if ! [[ "$GIT_REPO_TIMEOUT_SECONDS" =~ ^[0-9]+$ ]] || [[ "$GIT_REPO_TIMEOUT_SECONDS" -lt 1 ]]; then
   GIT_REPO_TIMEOUT_SECONDS=10
 fi
@@ -36,22 +40,6 @@ to_windows_path() {
 
 gh_available() {
   command -v gh >/dev/null 2>&1
-}
-
-gh_cmd() {
-  if [[ -n "${GH_TOKEN:-}" ]]; then
-    gh "$@"
-    return
-  fi
-
-  if [[ -f "$GH_GCM_SCRIPT" ]] && command -v powershell.exe >/dev/null 2>&1; then
-    local ps_script
-    ps_script="$(to_windows_path "$GH_GCM_SCRIPT")"
-    powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ps_script" "$@"
-    return
-  fi
-
-  gh "$@"
 }
 
 openclaw_cmd() {
@@ -76,6 +64,26 @@ git_with_timeout() {
   fi
 
   git "$@"
+}
+
+gh_cmd() {
+  local -a command_args
+  if [[ -n "${GH_TOKEN:-}" ]]; then
+    command_args=(gh "$@")
+  elif [[ -f "$GH_GCM_SCRIPT" ]] && command -v powershell.exe >/dev/null 2>&1; then
+    local ps_script
+    ps_script="$(to_windows_path "$GH_GCM_SCRIPT")"
+    command_args=(powershell.exe -NoProfile -ExecutionPolicy Bypass -File "$ps_script" "$@")
+  else
+    command_args=(gh "$@")
+  fi
+
+  if command -v timeout >/dev/null 2>&1; then
+    timeout "$GH_TIMEOUT_SECONDS" "${command_args[@]}"
+    return
+  fi
+
+  "${command_args[@]}"
 }
 
 ensure_repo() {
