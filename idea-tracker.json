@@ -2551,6 +2551,47 @@
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
         "notes": "可行性/需求/创新=7/9/7，平均7.67>=7，标记high-value；MVP可从视觉隐患检测与项目风险预警切入，主要风险是现场硬件集成、误报控制与安全责任合规。"
       }
+    },
+    "docai-studio": {
+      "name": "DocAI Studio - AI-Powered Unified Document Intelligence Platform",
+      "file": "prs/1444-docai-studio.md",
+      "status": "high-value",
+      "category": "Research & Content Creation",
+      "focusAreas": [
+        "Document Processing",
+        "AI Understanding",
+        "Knowledge Graph",
+        "Research Tools",
+        "Archiving"
+      ],
+      "scores": {
+        "technicalFeasibility": 9,
+        "marketDemand": 10,
+        "innovation": 8,
+        "developmentCost": 7,
+        "commercialPotential": 9
+      },
+      "totalScore": 8.6,
+      "summary": "AI-powered unified multi-format document intelligence platform for researchers, archivists, and content creators",
+      "priority": 1,
+      "createdAt": "2026-06-28",
+      "evaluationDate": "2026-06-28",
+      "evaluation": {
+        "evaluator": "OpenClaw",
+        "keyStrengths": [
+          "Researcher-focused design",
+          "Unified multi-format support",
+          "Knowledge graph native architecture",
+          "Strong market demand",
+          "Clear monetization path"
+        ],
+        "developmentStrategy": "MVP document parser → AI understanding → Knowledge graph → Enterprise features",
+        "marketOpportunity": "$50B+ TAM in document processing and AI market",
+        "riskLevel": "Medium",
+        "estimatedTimeline": "2 months for MVP, 6 months for full version",
+        "estimatedROI": "40%+ gross margins at scale",
+        "paybackPeriod": "18 months"
+      }
     }
   },
   "automation": {
