@@ -66,7 +66,7 @@ $env:GIT_REPO_TIMEOUT_SECONDS = '10'
 脚本中的 GitHub CLI 调用也有超时保护：
 
 - `GH_TIMEOUT_SECONDS` 控制每次 GitHub CLI 查询的最长秒数，默认 `45`。
-- GitHub 查询超时或不可用时，报告会写入 `unknown` 或不可用说明，而不是无限等待。
+- GitHub 查询超时或不可用时，报告会写入不可用说明；`readme-refresh` 会保留 README 中已有的 PR 数，而不是把临时网络问题写成 `unknown`。
 
 `quality-snapshot` 会扫描 `PROJECTS_DIR` 下的本地 Git 仓库。为避免单个异常仓库拖住定时任务：
 

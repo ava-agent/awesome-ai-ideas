@@ -736,14 +736,18 @@ readme_refresh() {
   ensure_repo
   ensure_identity
   ensure_clean_except README.md
-  local idea_count pr_count doc_count automation_count tracked_count open_pr_count refresh_date latest_weekly latest_weekly_label
+  local idea_count pr_count doc_count automation_count tracked_count open_pr_count existing_open_pr_count refresh_date latest_weekly latest_weekly_label
   idea_count="$(find ideas -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
   pr_count="$(find prs -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
   doc_count="$(find docs -type f 2>/dev/null | wc -l | tr -d ' ')"
   automation_count="$(find docs/automation -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
   tracked_count="$(grep -Eo '共有 \*\*[0-9]+\*\* 个想法' docs/roadmap.md 2>/dev/null | grep -Eo '[0-9]+' | head -1 || true)"
   [[ -z "$tracked_count" ]] && tracked_count="$idea_count"
-  open_pr_count="$(gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=100' --jq 'length' 2>/dev/null || echo 'unknown')"
+  open_pr_count="$(gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=100' --jq 'length' 2>/dev/null || true)"
+  if [[ -z "$open_pr_count" ]]; then
+    existing_open_pr_count="$(grep -Eo 'GitHub open PR：\*\*[^*]+\*\*' README.md 2>/dev/null | sed -E 's/.*\*\*([^*]+)\*\*.*/\1/' | head -1 || true)"
+    open_pr_count="${existing_open_pr_count:-unknown}"
+  fi
   refresh_date="$(date '+%Y-%m-%d')"
   latest_weekly="$(find docs -maxdepth 1 -type f -name 'weekly-review-*.md' 2>/dev/null | sort | tail -1 || true)"
   [[ -z "$latest_weekly" ]] && latest_weekly="docs/weekly-review-2026-W26.md"
