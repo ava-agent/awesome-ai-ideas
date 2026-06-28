@@ -3,7 +3,7 @@
 <div align="center">
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
-[![Tracked Ideas](https://img.shields.io/badge/tracked%20ideas-65-111827)](docs/roadmap.md)
+[![Tracked Ideas](https://img.shields.io/badge/tracked%20ideas-60-111827)](docs/roadmap.md)
 [![Proposals](https://img.shields.io/badge/proposals-10-0f766e)](prs/)
 [![Automation](https://img.shields.io/badge/automation-active-2563eb)](docs/automation/)
 
@@ -49,7 +49,7 @@ Awesome AI Ideas 收集 AI-native 产品、智能体工作流、行业应用和�
 
 更新时间：2026-06-28。
 
-- 路线图跟踪想法：**65** 个。
+- 结构化追踪想法：**60** 个。
 - issue idea 文件：**27** 个。
 - proposal 草稿：**10** 个。
 - 文档与研究文件：**222** 个。

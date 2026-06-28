@@ -741,7 +741,7 @@ readme_refresh() {
   pr_count="$(find prs -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
   doc_count="$(find docs -type f 2>/dev/null | wc -l | tr -d ' ')"
   automation_count="$(find docs/automation -maxdepth 1 -type f -name '*.md' 2>/dev/null | wc -l | tr -d ' ')"
-  tracked_count="$(grep -Eo '共有 \*\*[0-9]+\*\* 个想法' docs/roadmap.md 2>/dev/null | grep -Eo '[0-9]+' | head -1 || true)"
+  tracked_count="$(grep -Eo '(共有|结构化记录) \*\*[0-9]+\*\* 个想法' docs/roadmap.md 2>/dev/null | grep -Eo '[0-9]+' | head -1 || true)"
   [[ -z "$tracked_count" ]] && tracked_count="$idea_count"
   open_pr_count="$(gh_cmd api 'repos/ava-agent/awesome-ai-ideas/pulls?state=open&per_page=100' --jq 'length' 2>/dev/null || true)"
   if [[ -z "$open_pr_count" ]]; then
@@ -805,7 +805,7 @@ Awesome AI Ideas 收集 AI-native 产品、智能体工作流、行业应用和�
 
 更新时间：${refresh_date}。
 
-- 路线图跟踪想法：**${tracked_count}** 个。
+- 结构化追踪想法：**${tracked_count}** 个。
 - issue idea 文件：**${idea_count}** 个。
 - proposal 草稿：**${pr_count}** 个。
 - 文档与研究文件：**${doc_count}** 个。
