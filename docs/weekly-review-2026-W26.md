@@ -1,72 +1,77 @@
 # Weekly Review 2026-W26
 
-- Generated at: 2026-06-23 20:31:11 +0800
-- Commit identity: kevinten <596823919@qq.com>
-- Remote: https://github.com/ava-agent/awesome-ai-ideas.git
+- Generated at: 2026-06-28 16:45 +0800
+- Scope: README, roadmap, idea tracker, automation reports, and live GitHub PR/issue checks
+- Commit identity required by AGENTS.md: `kevinten <596823919@qq.com>`
 
-## Recent Daily Summaries
+## 本周结论
 
-- daily-summary-2026-06-22.md
-  # 每日总结 - 2026-06-22
-  
-  今日完成四项常规任务：项目进度检查、健康巡检、安全审计和技术调研汇总。
-  
-  进度检查显示所有四个高价值创意保持稳定评分，平均得分8.18，仓库工作区干净，暂无进行中开发任务。
-  
-  安全审计发现4个OpenClaws AI项目共31个依赖漏洞，其中7个高危漏洞集中在nodemailer、form-data和lodash等包，建议优先安排修复。
-  
-- daily-summary-2026-06-19.md
-  # 每日总结 - 2026-06-19
-  
-  - 今日完成项目健康巡检：`ai-appointment-manager` 与 `ai-contract-reader` 状态健康，`ai-carbon-footprint-tracker` 存在未提交改动需后续关注。
-  - 进度检查显示 `idea-tracker.json` 中 4 个想法均为 `high-value`，但暂未找到明确真实仓库映射，应作为想法阶段继续跟踪。
-  - 真实仓库抽样检查未发现读取、提交记录或工作区异常，`awesome-ai-ideas` 与 `ai-family-health-guardian` 检查时均干净。
-  - 技术调研关注 OpenAI 企业花费控制、医疗健康 AI 进展，以及 Anthropic 相关出口管制动态。
-  - 今日整体状态稳定；下一步重点是处理 `ai-carbon-footprint-tracker` 未提交改动，并为高价值想法补齐仓库落地路径。
-- daily-summary-2026-06-18.md
-  # 每日总结 - 2026-06-18
-  
-  今日完成了项目例行健康巡检，所有核心仓库状态良好，仅发现 `romance-of-three-claws` 存在未追踪的 .DS_Store 文件冗余文件，无代码层面变动。
-  
-  当前 idea 盘点显示共有 4 个高价值 AI 创业想法储备，平均得分 8.18 分，目前均处于 idea 验证阶段，尚未启动实际开发。
-  
-  技术调研方面，OpenAI 昨日发布了两项生命科学相关进展，包括 AI 辅助有机合成反应优化成果以及生命科学基准测试集 LifeSciBench；Anthropic 则确认受到美国最新出口管制措施影响，暂停了特定模型对部分区域的访问。
-  
-- daily-summary-2026-06-17.md
-  # 每日总结 - 2026-06-17
-  
-  今日完成了高价值想法库状态核对，确认目前有4个高优先级待开发项目，所有高价值想法仍处于文档收集评估阶段，尚未创建对应开发仓库。
-  
-  技术调研方面，跟进了OpenAI最新研究动态（发布前部署模拟预测模型行为）和生态建设（推出合作伙伴网络），以及Anthropic受到美国出口管制更新的行业影响。
-  
-  更新了项目路线图，明确了Q2-Q4分阶段开发计划，当前聚焦AI Workspace Orchestrator MVP开发，后续按计划推进高社会价值C端项目。
-  
-- daily-summary-2026-06-16.md
-  # 每日总结 - 2026-06-16
-  
-  今日完成仓库进度抽查与项目健康巡检，确认 `awesome-ai-ideas` 和 `ai-appointment-manager` 工作区干净，所有提交记录正常。
-  
-  巡检发现 `ai-carbon-footprint-tracker` 存在未提交改动，需要后续关注完成情况。
-  
-  技术调研方面，记录了 OpenAI Partner Network 生态扩展、OpenAI Academy 新增职场 AI 课程，以及 Anthropic 受美国出口管制影响暂停部分模型访问的行业动态。
-  
+本周仓库从常规快照进入“自动化产物需要降噪、统计口径需要校准”的阶段。README 已在 2026-06-26 刷新，自动化报告数、proposal 数和最新周报链接基本有效；但 GitHub open PR 数已过期，`idea-tracker.json` 存在重复 key/统计口径不一致，`docs/roadmap.md` 的 65 个想法与结构化解析结果无法直接对齐。
 
-## Recent Automation Signals
+路线图暂不建议自动改。当前优先顺序仍写作：AI职场软技能导师 -> AI简历诊断师 -> AI音乐创作伙伴 -> AI个人成长教练；但趋势扫描显示 Agent Security ReviewOps 和 Healthcare Admin Precision Copilot 是更值得进入下一轮候选评估的新方向，应先补成结构化 idea，再决定是否调整路线图。
 
-- docs/automation/repo-pulse-2026-06-23-2029.md
-- docs/automation/quality-snapshot-2026-06-23-2024.md
-- docs/automation/idea-backlog-2026-06-23-2021.md
-- docs/automation/pr-snapshot-2026-06-23-2020.md
-- docs/automation/repo-pulse-2026-06-23-2020.md
+## 本周新增或变化
 
-## Repository Snapshot
+- README 当前快照日期为 2026-06-26，显示 65 个路线图想法、3 个 issue idea、9 个 proposal、70 个自动化报告、3 个 open PR。
+- 实测 `docs/automation/` 当前确有 70 个报告；`ideas/*.md` 为 3 个，`prs/*.md` 为 9 个，`p/*` 目录为 9 个。
+- GitHub 实时检查显示 open PR 只有 1 个：#1368 `ChainVision AI`；6 月 25 日自动化报告里的 #1420 已不再出现在 open PR 列表中，因此 README 的 open PR=3 已过期。
+- GitHub open issue 最新信号包含 #1434 “AI讨论：你还享受手动写代码的乐趣吗？”以及 #1426 `MfgKnowledge AI`，其中 #1426 已带 `quality:high`、`ai-agents`、`knowledge-graph`、`rag` 标签。
+- `trend-candidates-2026-06-26.md` 新增 5 个趋势候选，并明确推荐优先跟进 `Agent Security ReviewOps` 与 `Healthcare Admin Precision Copilot`。
+- 未发现名为 `idea-priority-review` 或 `idea-quality-gaps` 的报告文件；对应信号主要分散在 `idea-backlog-*`、`quality-snapshot-*`、`trend-candidates-*` 和 `idea-tracker.json`。
 
-- Latest commit: 9ccf4ec chore: make weekly review deterministic
-- Automation reports: 5
-- Idea files: 3
+## README 状态
 
-## Next Focus
+README 没有整体过期，但局部统计已过期：
 
-- Keep commits attributed to kevinten10.
-- Continue frequent small operational snapshots.
-- Investigate dirty downstream project repositories before enabling automated code changes.
+- 有效：最新周报链接、automation 报告数 70、issue idea 3、proposal 9 与本地文件系统一致。
+- 过期：GitHub open PR 写作 3，实时 `gh-gcm.ps1 pr list` 只返回 1 个。
+- 需核对：路线图追踪想法 65 与 `idea-tracker.json` 的结构化解析结果不一致。
+
+建议等下一次 `readme-refresh` 将 open PR 数更新为实时值；本轮不直接改 README，因为这是统计刷新问题，不是内容结构问题。
+
+## Tracker 与 Roadmap 一致性
+
+`docs/roadmap.md` 截至 2026-06-24，写明 65 个想法、12 个已产品化、1 个进行中、16 个高价值待启动，下一阶段优先顺序为 AI职场软技能导师、AI简历诊断师、AI音乐创作伙伴、AI个人成长教练。
+
+`idea-tracker.json` 的元数据为：
+
+- `lastSync`: 2026-04-23T09:01:00Z
+- `lastReview`: 2026-04-02T02:30:00Z
+- `lastEvaluation`: 2026-06-25T02:30:00Z
+
+结构化解析可见 60 个 idea 对象，状态分布为 19 个 low-value、16 个 high-value、9 个 new、9 个 completed、4 个 medium-value、1 个 created、1 个 duplicate、1 个 in-progress。原始文本扫描发现 76 个 key 声明但只有 61 个唯一 key，说明文件里存在重复 key；这会让标准 JSON 解析覆盖旧值，并解释了 tracker、roadmap、README 之间的数量差异。
+
+当前 in-progress 仍只有 `AI Workspace Orchestrator`，`lastUpdated` 为 2026-04-12，phase 停留在用户注册/登录/JWT/角色更新阶段。若该项目近期没有外部进展，roadmap 中的“正在开发中”状态需要人工确认是否仍有效。
+
+## 自动化报告质量
+
+报告覆盖面足够，但噪音偏多：
+
+- `repo-pulse`: 18 份
+- `pr-snapshot`: 12 份
+- `idea-backlog`: 10 份
+- `pr-review-queue`: 10 份
+- `quality-snapshot`: 9 份
+- `pr-ci-triage`: 7 份
+- `three-claws-collaboration`: 3 份
+- `trend-candidates`: 1 份
+
+主要噪音来自同一天多次低信息量快照。PR CI triage 报告还出现 `No commit found for SHA: /check-runs` 和 `Ref not found`，说明 CI 检查抓取逻辑需要修正，否则会持续产出不可行动的错误文本。建议保留趋势扫描、每日 1 次 repo pulse、每日 1 次 idea backlog、按需 PR/CI triage，减少固定频率的重复 PR snapshot。
+
+## 最值得推进的 3 个动作
+
+1. 修复 `idea-tracker.json` 的重复 key 和统计口径，再用同一口径刷新 roadmap/README 数字。先只做数据清洗和校验，不重排路线图。
+2. 将 `Agent Security ReviewOps` 与 `Healthcare Admin Precision Copilot` 各补一份标准 idea 草稿，并与现有 high-value 列表做去重评分。
+3. 降低自动化报告噪音：修复 PR CI triage 的 SHA/ref 获取逻辑，将重复快照合并为“最新状态 + 变化摘要”。
+
+## 路线图是否需要更新
+
+暂不自动更新。需要更新的不是优先级文字本身，而是支撑它的统计证据：tracker 重复 key、AI Workspace Orchestrator 进展停留日期、README PR 数过期。等这些基础数据修正后，再决定是否把趋势候选纳入下一阶段优先顺序。
+
+## 下周检查点
+
+- README open PR 数是否从 3 修正为实时值。
+- `idea-tracker.json` 是否完成重复 key 清理并能被标准 JSON parser 稳定解析。
+- #1426 `MfgKnowledge AI` 是否进入本地 idea/proposal 文档。
+- #1368 `ChainVision AI` 是否仍长期滞留 open 状态，是否需要关闭、更新或转为本地 proposal。
+- 自动化目录是否继续按小时生成重复报告；若是，应调整计划频率或报告合并策略。
