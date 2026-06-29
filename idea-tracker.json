@@ -1609,8 +1609,8 @@
     }
   },
   "stats": {
-    "total": 67,
-    "highValue": 19,
+    "total": 61,
+    "highValue": 17,
     "inProgress": 1,
     "completed": 12,
     "new": 11,
