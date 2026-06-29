@@ -2,7 +2,7 @@
   "version": "1.1.0",
   "lastSync": "2026-04-23T09:01:00Z",
   "lastReview": "2026-04-02T02:30:00Z",
-  "lastEvaluation": "2026-06-27T02:30:00Z",
+  "lastEvaluation": "2026-06-29T07:05:39Z",
   "evaluationCriteria": {
     "technicalFeasibility": "技术实现难度和可行性 (1-10)",
     "marketDemand": "市场需求强度 (1-10)",
@@ -1579,6 +1579,32 @@
         "evaluator": "孔明",
         "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
         "notes": "社会痛点精准，差异化极强，政府/NGO合作空间大，但用户获取和数据采集存在挑战。"
+      }
+    },
+    "for-compliance-officers-security-teams-data-analysts-complysecure-ai---from-manual-compliance-and-security-burden-to-ai-powered-automated-governance": {
+      "name": "ComplySecure AI",
+      "file": "ideas/issue-1441--for-Compliance-Officers-Security-Teams-Data-Analysts-ComplySecure-AI---From-manual-compliance-and-security-burden-to-AI-powered-automated-governance-ecosystem.md",
+      "status": "high-value",
+      "category": "B2B企业级AI",
+      "focusAreas": [
+        "合规管理",
+        "安全监控",
+        "数据分析",
+        "自动化治理"
+      ],
+      "scores": {
+        "technicalFeasibility": 9,
+        "marketDemand": 9,
+        "innovation": 8
+      },
+      "totalScore": 8.67,
+      "summary": "AI驱动的合规与安全自动化治理平台，解决企业监管合规、安全监控和数据分析的沉重负担，市场需求迫切。",
+      "priority": null,
+      "evaluationDate": "2026-06-29T07:05:39Z",
+      "evaluation": {
+        "evaluator": "OpenClaw",
+        "criteria": "快速评估：可行性/需求/创新各1-10，平均分>=7标记high-value",
+        "notes": "可行性/需求/创新=9/9/8，平均8.67>=7，标记high-value；监管趋严和安全威胁增加驱动市场需求，差异化竞争优势明显，商业化路径清晰。"
       }
     }
   },
