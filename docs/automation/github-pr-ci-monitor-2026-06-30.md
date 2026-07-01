@@ -64,4 +64,3 @@ Run time: 2026-06-30 11:30 Asia/Shanghai
 
 - Start a backlog aging pass for issues older than 2026-05-31. The open backlog is 684 issues, with 673 not updated since that date.
 - Add a lightweight PR monitor check that flags open PRs with empty `statusCheckRollup`, so review decisions are not mistaken for CI coverage.
-
