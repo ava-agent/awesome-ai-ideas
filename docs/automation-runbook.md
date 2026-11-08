@@ -6,16 +6,18 @@
 
 - 仓库路径：`D:\project\awesome-ai-ideas`
 - 远端仓库：`https://github.com/ava-agent/awesome-ai-ideas.git`
-- 提交身份：`kevinten <596823919@qq.com>`
+- 提交身份：`kevinten <22876610+kevinten10@users.noreply.github.com>`
 - Windows Git Bash：`D:\git\Git\usr\bin\bash.exe`
 
 提交前必须执行：
 
 ```powershell
 git config user.name kevinten
-git config user.email 596823919@qq.com
+git config user.email 22876610+kevinten10@users.noreply.github.com
 git config core.longpaths true
 ```
+
+使用 `kevinten10` 账号对应的 GitHub noreply 邮箱，作者与提交者均使用该身份，以保留账号归属并避免 `GH007` 邮箱隐私拒绝。无需关闭 GitHub 邮箱隐私保护，也不要修改全局 Git 身份。
 
 自动化提交时不要使用 `git add -A`，只暂存本次任务生成或修复的目标文件。
 

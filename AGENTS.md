@@ -2,10 +2,11 @@
 
 ## GitHub Identity
 
-- All commits in this repository must be authored and committed as `kevinten <596823919@qq.com>`.
+- All commits in this repository must be authored and committed as `kevinten <22876610+kevinten10@users.noreply.github.com>`.
 - Before creating commits, run:
   `git config user.name kevinten`
-  `git config user.email 596823919@qq.com`
+  `git config user.email 22876610+kevinten10@users.noreply.github.com`
+- This is the GitHub-provided commit email for `kevinten10`; use it to preserve account attribution without exposing a private email address.
 - Do not use `孔明 (Kongming) <kongming@ai-ideas-lab.com>` for new commits. GitHub does not attribute that identity to `kevinten10`.
 
 ## Scheduled Tasks
