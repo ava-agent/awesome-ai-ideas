@@ -4,7 +4,7 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 [![Tracked Ideas](https://img.shields.io/badge/tracked%20ideas-60-111827)](docs/roadmap.md)
-[![Proposals](https://img.shields.io/badge/proposals-11-0f766e)](prs/)
+[![Proposals](https://img.shields.io/badge/proposals-15-0f766e)](prs/)
 [![Automation](https://img.shields.io/badge/automation-active-2563eb)](docs/automation/)
 
 **精选 AI 产品创意、智能体方向与可落地的创业想法。**
@@ -47,14 +47,14 @@ Awesome AI Ideas 收集 AI-native 产品、智能体工作流、行业应用和�
 
 ## 当前快照
 
-更新时间：2026-07-01。
+更新时间：2026-11-09。
 
 - 结构化追踪想法：**60** 个。
-- issue idea 文件：**67** 个。
-- proposal 草稿：**11** 个。
-- 文档与研究文件：**229** 个。
-- 自动化报告：**115** 个。
-- GitHub open PR：**3** 个。
+- issue idea 文件（`ideas/`）：**140** 个 Markdown，共 140 个文件。
+- proposal 草稿（`prs/`）：**15** 个 Markdown，共 15 个文件。
+- 文档与研究文件（`docs/`，含自动化报告）：**231** 个文件，其中 229 个为 Markdown。
+- 自动化报告（`docs/automation/`）：**116** 个 Markdown，共 116 个文件。
+- GitHub open PR：检查时为 **14** 个。[查看当前待审 PR](https://github.com/ava-agent/awesome-ai-ideas/pulls)。
 
 ## 精选 Ideas
 
